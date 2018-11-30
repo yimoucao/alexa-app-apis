@@ -63,7 +63,125 @@ Response:
 
 # `/api/devices-v2/`
 
+Response:
+
+    {}
+
 # `/api/devices-v2/device?cached=false`
+
+Response:
+
+    {
+    "devices": [
+        {
+        "accountName": "Echo Dot",
+        "appDeviceList": [],
+        "capabilities": [
+            "SUPPORTS_SOFTWARE_VERSION",
+            "AMAZON_MUSIC",
+            "AUDIBLE",
+            "VOLUME_SETTING",
+            "MUSIC_SKILL",
+            "DEREGISTER_DEVICE",
+            "SOUND_SETTINGS",
+            "ACTIVE_AFTER_FRO",
+            "CHANGE_NAME",
+            "FAR_FIELD_WAKE_WORD",
+            "TIMERS_AND_ALARMS",
+            "LEMUR_ALPHA",
+            "I_HEART_RADIO",
+            "PAIR_REMOTE",
+            "PAIR_BT_SINK",
+            "VOICE_TRAINING",
+            "TAHOE_BYOD",
+            "DREAM_TRAINING",
+            "SLEEP",
+            "PANDORA",
+            "SET_LOCALE",
+            "AUDIO_PLAYER",
+            "GADGETS",
+            "POPTART",
+            "UPDATE_WIFI",
+            "DS_VOLUME_SETTING",
+            "TUNE_IN",
+            "KINDLE_BOOKS",
+            "FLASH_BRIEFING",
+            "SALMON",
+            "SUPPORTS_CONNECTED_HOME",
+            "MICROPHONE",
+            "SUPPORTS_CONNECTED_HOME_ALL",
+            "CUSTOM_ALARM_TONE",
+            "REMINDERS",
+            "REQUIRES_OOBE_FOR_SETUP",
+            "EARCONS",
+            "PERSISTENT_CONNECTION",
+            "GOLDFISH",
+            "PAIR_BT_SOURCE",
+            "DEREGISTER_FACTORY_RESET"
+        ],
+        "charging": null,
+        "clusterMembers": [],
+        "deviceAccountId": "XXXXXXXXXXXXX",
+        "deviceFamily": "ECHO",
+        "deviceOwnerCustomerId": "XXXXXXXXXXXXXX",
+        "deviceType": "XXXXXXXXXXXXXX",
+        "deviceTypeFriendlyName": null,
+        "essid": null,
+        "language": null,
+        "macAddress": null,
+        "online": false,
+        "parentClusters": [],
+        "postalCode": null,
+        "registrationId": null,
+        "remainingBatteryLevel": null,
+        "serialNumber": "XXXXXXXXXXXXXXXX",
+        "softwareVersion": "000000000"
+        },
+        {
+        "accountName": "echosim_BETA",
+        "appDeviceList": [],
+        "capabilities": [
+            "AMAZON_MUSIC",
+            "AUDIBLE",
+            "AUDIO_PLAYER",
+            "VOLUME_SETTING",
+            "MUSIC_SKILL",
+            "DEREGISTER_DEVICE",
+            "TUNE_IN",
+            "CHANGE_NAME",
+            "KINDLE_BOOKS",
+            "TIMERS_AND_ALARMS",
+            "MICROPHONE",
+            "I_HEART_RADIO",
+            "PEONY",
+            "SUPPORTS_CONNECTED_HOME_CLOUD_ONLY",
+            "DREAM_TRAINING",
+            "PERSISTENT_CONNECTION",
+            "GOLDFISH",
+            "SLEEP"
+        ],
+        "charging": null,
+        "clusterMembers": [],
+        "deviceAccountId": "XXXXXXXXXXXXXX",
+        "deviceFamily": "UNKNOWN",
+        "deviceOwnerCustomerId": "XXXXXXXXXXXXXX",
+        "deviceType": "XXXXXXXXXXXXXX",
+        "deviceTypeFriendlyName": "echosim_BETA",
+        "essid": null,
+        "language": null,
+        "macAddress": null,
+        "online": false,
+        "parentClusters": [],
+        "postalCode": null,
+        "registrationId": null,
+        "remainingBatteryLevel": null,
+        "serialNumber": "xxxxxx",
+        "softwareVersion": "0"
+        },
+        ...
+    ]
+    }
+
 
 # `/api/devices/`
 
