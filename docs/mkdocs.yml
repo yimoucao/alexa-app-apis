@@ -1,0 +1,6 @@
+site_name: Alexa Private APIs
+nav:
+  - Home: index.md
+  - APIs: apis.md
+  - CONSTANTs: constants.md
+theme: readthedocs

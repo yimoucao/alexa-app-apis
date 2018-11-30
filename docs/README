@@ -1,0 +1,6 @@
+
+mkdocs new [folername]
+
+mkdocs serve
+
+mkdocs build
