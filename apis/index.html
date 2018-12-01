@@ -100,10 +100,7 @@
     <li class="toctree-l2"><a href="#apicustomer-status">/api/customer-status</a></li>
     
 
-    <li class="toctree-l2"><a href="#apidevices-v2">/api/devices-v2/</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apidevices-v2devicecachedfalse">/api/devices-v2/device?cached=false</a></li>
+    <li class="toctree-l2"><a href="#apidevices-v2device">/api/devices-v2/device</a></li>
     
 
     <li class="toctree-l2"><a href="#apidevices">/api/devices/</a></li>
@@ -304,8 +301,147 @@
 <h1 id="apicalendaraccount"><code>/api/calendar/account</code></h1>
 <h1 id="apicommunications"><code>/api/communications</code></h1>
 <h1 id="apicustomer-status"><code>/api/customer-status</code></h1>
-<h1 id="apidevices-v2"><code>/api/devices-v2/</code></h1>
-<h1 id="apidevices-v2devicecachedfalse"><code>/api/devices-v2/device?cached=false</code></h1>
+<p>Response:</p>
+<pre><code>{
+    "countryOfResidenceSet":true,
+    "eulaAcceptance":true,
+    "ftueSkipped":false,
+    "hasActiveDopplers":true,
+    "hasPhysical1PDevice":true,
+    "preferredMarketplaceSet":true,
+    "tutorialComplete":false
+}
+</code></pre>
+<h1 id="apidevices-v2device"><code>/api/devices-v2/device</code></h1>
+<p>GET parameters:</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>value/description</th>
+<th>required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cached</td>
+<td>false</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>Response:</p>
+<pre><code>{
+"devices": [
+    {
+    "accountName": "Echo Dot",
+    "appDeviceList": [],
+    "capabilities": [
+        "SUPPORTS_SOFTWARE_VERSION",
+        "AMAZON_MUSIC",
+        "AUDIBLE",
+        "VOLUME_SETTING",
+        "MUSIC_SKILL",
+        "DEREGISTER_DEVICE",
+        "SOUND_SETTINGS",
+        "ACTIVE_AFTER_FRO",
+        "CHANGE_NAME",
+        "FAR_FIELD_WAKE_WORD",
+        "TIMERS_AND_ALARMS",
+        "LEMUR_ALPHA",
+        "I_HEART_RADIO",
+        "PAIR_REMOTE",
+        "PAIR_BT_SINK",
+        "VOICE_TRAINING",
+        "TAHOE_BYOD",
+        "DREAM_TRAINING",
+        "SLEEP",
+        "PANDORA",
+        "SET_LOCALE",
+        "AUDIO_PLAYER",
+        "GADGETS",
+        "POPTART",
+        "UPDATE_WIFI",
+        "DS_VOLUME_SETTING",
+        "TUNE_IN",
+        "KINDLE_BOOKS",
+        "FLASH_BRIEFING",
+        "SALMON",
+        "SUPPORTS_CONNECTED_HOME",
+        "MICROPHONE",
+        "SUPPORTS_CONNECTED_HOME_ALL",
+        "CUSTOM_ALARM_TONE",
+        "REMINDERS",
+        "REQUIRES_OOBE_FOR_SETUP",
+        "EARCONS",
+        "PERSISTENT_CONNECTION",
+        "GOLDFISH",
+        "PAIR_BT_SOURCE",
+        "DEREGISTER_FACTORY_RESET"
+    ],
+    "charging": null,
+    "clusterMembers": [],
+    "deviceAccountId": "XXXXXXXXXXXXX",
+    "deviceFamily": "ECHO",
+    "deviceOwnerCustomerId": "XXXXXXXXXXXXXX",
+    "deviceType": "XXXXXXXXXXXXXX",
+    "deviceTypeFriendlyName": null,
+    "essid": null,
+    "language": null,
+    "macAddress": null,
+    "online": false,
+    "parentClusters": [],
+    "postalCode": null,
+    "registrationId": null,
+    "remainingBatteryLevel": null,
+    "serialNumber": "XXXXXXXXXXXXXXXX",
+    "softwareVersion": "000000000"
+    },
+    {
+    "accountName": "echosim_BETA",
+    "appDeviceList": [],
+    "capabilities": [
+        "AMAZON_MUSIC",
+        "AUDIBLE",
+        "AUDIO_PLAYER",
+        "VOLUME_SETTING",
+        "MUSIC_SKILL",
+        "DEREGISTER_DEVICE",
+        "TUNE_IN",
+        "CHANGE_NAME",
+        "KINDLE_BOOKS",
+        "TIMERS_AND_ALARMS",
+        "MICROPHONE",
+        "I_HEART_RADIO",
+        "PEONY",
+        "SUPPORTS_CONNECTED_HOME_CLOUD_ONLY",
+        "DREAM_TRAINING",
+        "PERSISTENT_CONNECTION",
+        "GOLDFISH",
+        "SLEEP"
+    ],
+    "charging": null,
+    "clusterMembers": [],
+    "deviceAccountId": "XXXXXXXXXXXXXX",
+    "deviceFamily": "UNKNOWN",
+    "deviceOwnerCustomerId": "XXXXXXXXXXXXXX",
+    "deviceType": "XXXXXXXXXXXXXX",
+    "deviceTypeFriendlyName": "echosim_BETA",
+    "essid": null,
+    "language": null,
+    "macAddress": null,
+    "online": false,
+    "parentClusters": [],
+    "postalCode": null,
+    "registrationId": null,
+    "remainingBatteryLevel": null,
+    "serialNumber": "xxxxxx",
+    "softwareVersion": "0"
+    },
+    ...
+]
+}
+</code></pre>
 <h1 id="apidevices"><code>/api/devices/</code></h1>
 <h1 id="apidevicesalexa_device_type_group-dserial-devicetype"><code>/api/devices/{ALEXA_DEVICE_TYPE_GROUP}/</code> + d.serial + <code>?deviceType=</code></h1>
 <h1 id="apieonhouseholdaccounts"><code>/api/eon/householdaccounts</code></h1>
@@ -314,6 +450,29 @@
 <h1 id="apiget-available-countries-for-connect"><code>/api/get-available-countries-for-connect</code></h1>
 <h1 id="apiget-customer-pfm"><code>/api/get-customer-pfm</code></h1>
 <h1 id="apiget-languages"><code>/api/get-languages</code></h1>
+<p>return available languages. Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP</p>
+<p>Response:</p>
+<pre><code>{
+"availableLanguages": [
+    {
+    "languageCountryCode": "DE",
+    "languageName": "Deutsch",
+    "locale": "de-DE"
+    },
+    {
+    "languageCountryCode": "US",
+    "languageName": "English (United States)",
+    "locale": "en-US"
+    },
+    {
+    "languageCountryCode": "CA",
+    "languageName": "English (Canada)",
+    "locale": "en-CA"
+    },
+    ...
+]
+}
+</code></pre>
 <h1 id="apihouseholdcsrftokenhouseholdoperationname-a-sessionid"><code>/api/household/CSRFToken?householdOperationName=</code> + a + <code>;sessionId=</code></h1>
 <h1 id="apiiheartradiopreferences"><code>/api/iheartradio/preferences</code></h1>
 <h1 id="apiiheartradioregistration-code"><code>/api/iheartradio/registration-code</code></h1>
