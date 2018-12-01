@@ -448,7 +448,48 @@
 <h1 id="apiexternal-auth"><code>/api/external-auth</code></h1>
 <h1 id="apiexternal-authlink-url"><code>/api/external-auth/link-url</code></h1>
 <h1 id="apiget-available-countries-for-connect"><code>/api/get-available-countries-for-connect</code></h1>
+<p>Response:</p>
+<pre><code>{
+"availableCountries": [
+    {
+    "countryCode": "DE",
+    "dialingCode": "+49"
+    },
+    {
+    "countryCode": "GI",
+    "dialingCode": "+350"
+    },
+    {
+    "countryCode": "AT",
+    "dialingCode": "+43"
+    },
+    {
+    "countryCode": "GB",
+    "dialingCode": "+44"
+    },
+    {
+    "countryCode": "IE",
+    "dialingCode": "+353"
+    },
+    {
+    "countryCode": "US",
+    "dialingCode": "+1"
+    }
+]
+}
+</code></pre>
 <h1 id="apiget-customer-pfm"><code>/api/get-customer-pfm</code></h1>
+<p>Get customer's personal finantial market (?)</p>
+<p>TODO: all market place ids</p>
+<p>Response:</p>
+<pre><code>{
+"countryOfResidence": "US",
+"effectiveMarketPlaceId": "XXXXXXXXXXXXX",
+"marketPlaceDomainName": "https://www.amazon.com",
+"marketPlaceId": "XXXXXXXXXXXXX",
+"marketPlaceLocale": "en-US"
+}
+</code></pre>
 <h1 id="apiget-languages"><code>/api/get-languages</code></h1>
 <p>return available languages. Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP</p>
 <p>Response:</p>
