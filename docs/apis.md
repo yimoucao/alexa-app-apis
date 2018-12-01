@@ -61,13 +61,25 @@ Response:
 
 # `/api/customer-status`
 
-# `/api/devices-v2/`
-
 Response:
 
-    {}
+    {
+        "countryOfResidenceSet":true,
+        "eulaAcceptance":true,
+        "ftueSkipped":false,
+        "hasActiveDopplers":true,
+        "hasPhysical1PDevice":true,
+        "preferredMarketplaceSet":true,
+        "tutorialComplete":false
+    }
 
-# `/api/devices-v2/device?cached=false`
+# `/api/devices-v2/device`
+
+GET parameters:
+
+| parameter | value/description | required |
+| --------- | ----------------- | -------- |
+| cached    | false             | no       |
 
 Response:
 
@@ -182,7 +194,6 @@ Response:
     ]
     }
 
-
 # `/api/devices/`
 
 # `/api/devices/{ALEXA_DEVICE_TYPE_GROUP}/` + d.serial + `?deviceType=`
@@ -198,6 +209,33 @@ Response:
 # `/api/get-customer-pfm`
 
 # `/api/get-languages`
+
+return available languages. Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP
+
+Response:
+
+    {
+    "availableLanguages": [
+        {
+        "languageCountryCode": "DE",
+        "languageName": "Deutsch",
+        "locale": "de-DE"
+        },
+        {
+        "languageCountryCode": "US",
+        "languageName": "English (United States)",
+        "locale": "en-US"
+        },
+        {
+        "languageCountryCode": "CA",
+        "languageName": "English (Canada)",
+        "locale": "en-CA"
+        },
+        ...
+    ]
+    }
+
+
 
 # `/api/household/CSRFToken?householdOperationName=` + a + `;sessionId=`
 
