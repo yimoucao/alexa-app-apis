@@ -206,7 +206,53 @@ Response:
 
 # `/api/get-available-countries-for-connect`
 
+Response:
+
+    {
+    "availableCountries": [
+        {
+        "countryCode": "DE",
+        "dialingCode": "+49"
+        },
+        {
+        "countryCode": "GI",
+        "dialingCode": "+350"
+        },
+        {
+        "countryCode": "AT",
+        "dialingCode": "+43"
+        },
+        {
+        "countryCode": "GB",
+        "dialingCode": "+44"
+        },
+        {
+        "countryCode": "IE",
+        "dialingCode": "+353"
+        },
+        {
+        "countryCode": "US",
+        "dialingCode": "+1"
+        }
+    ]
+    }
+
+
 # `/api/get-customer-pfm`
+
+Get customer's personal finantial market (?)
+
+TODO: all market place ids
+
+Response:
+
+    {
+    "countryOfResidence": "US",
+    "effectiveMarketPlaceId": "XXXXXXXXXXXXX",
+    "marketPlaceDomainName": "https://www.amazon.com",
+    "marketPlaceId": "XXXXXXXXXXXXX",
+    "marketPlaceLocale": "en-US"
+    }
 
 # `/api/get-languages`
 
