@@ -208,39 +208,29 @@ Response:
 
 Response:
 
+| countryCode | dialingCode |
+| ----------- | ----------- |
+| DE          | +49         |
+| GI          | +350        |
+| AT          | +43         |
+| GB          | +44         |
+| IE          | +353        |
+| US          | +1          |
+
     {
     "availableCountries": [
         {
         "countryCode": "DE",
         "dialingCode": "+49"
         },
-        {
-        "countryCode": "GI",
-        "dialingCode": "+350"
-        },
-        {
-        "countryCode": "AT",
-        "dialingCode": "+43"
-        },
-        {
-        "countryCode": "GB",
-        "dialingCode": "+44"
-        },
-        {
-        "countryCode": "IE",
-        "dialingCode": "+353"
-        },
-        {
-        "countryCode": "US",
-        "dialingCode": "+1"
-        }
+        ...
     ]
     }
 
 
 # `/api/get-customer-pfm`
 
-Get customer's personal finantial market (?)
+Get customer's **p**ersonal **f**inantial **m**arket (?)
 
 TODO: all market place ids
 
@@ -256,9 +246,20 @@ Response:
 
 # `/api/get-languages`
 
-return available languages. Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP
+return available languages. 
+
+Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP
 
 Response:
+
+| languageCountryCode | languageName | locale |
+| ------------------- | ------------ | ------ |
+| DE | Deutsch      | de-DE |
+| US | English (United States) | en-US |
+| CA | English (Canada) | de-CA |
+| CA | English (Canada) | de-CA |
+| CA | English (Canada) | de-CA |
+| CA | English (Canada) | de-CA |
 
     {
     "availableLanguages": [
@@ -271,11 +272,6 @@ Response:
         "languageCountryCode": "US",
         "languageName": "English (United States)",
         "locale": "en-US"
-        },
-        {
-        "languageCountryCode": "CA",
-        "languageName": "English (Canada)",
-        "locale": "en-CA"
         },
         ...
     ]
