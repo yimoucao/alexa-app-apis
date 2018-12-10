@@ -57,7 +57,33 @@ Response:
 
 # `/api/calendar/account`
 
-# `/api/communications`
+# COMMUNICATIONS
+
+# `/api/communications/providers`
+
+Response:
+
+    {
+    "cspList": [
+        {
+        "androidDeepLinkSupport": true,
+        "cspUserId": "not-linked",
+        "details": true,
+        "iconUrl": "a/url/here",
+        "id": "Lightyear",
+        "launchUrl": "https://skype.com",
+        "linked": false,
+        "name": "Skype",
+        "showWelcomeScreen": true,
+        "usePrefMethodExtAuthIos": true
+        }
+        ...
+    ]
+    }
+
+# `/api/communications/providers?_=`
+
+
 
 # `/api/customer-status`
 
@@ -295,11 +321,61 @@ Response:
 
 # `/api/lists/fetchUserPreference`
 
+Show user's list preference.
+
+Response:
+
+    {
+        "customerListPreference": {
+            "ShowDiscoverabilityPopup": false,
+            "customerId": "XXXXXXXXXXXXXX"
+        }
+    }
+
 # `/api/lists/linkedPartners`
+
+List linked list partners.
 
 # `/api/lists/listPartners`
 
+List TODO list partners. Such as: Any.do, AnyList, Cozi Lists, Picniic, Todoist.
+
+Response:
+
+    {
+    "listPartners": [
+        {
+        "amazonStoreURL": null,
+        "appId": "amzn1.ask.skill.5858c12a-c55c-4a1b-b59c-f7f6bfdf22ed",
+        "appStoreURL": null,
+        "linkingFlowAmazonDeepLinkURL": null,
+        "linkingFlowAndroidDeepLinkURL": null,
+        "linkingFlowIOSDeepLinkURL": null,
+        "linkingFlowWebURL": "skills/dp/B074X3JRHL/?ref=skill_dsk_skb_sr_0",
+        "logoImageURL": "https://images-na.ssl-images-amazon.com/images/I/41y53Nnp+wL.png",
+        "name": "Any.do",
+        "playStoreURL": null,
+        "webURL": null
+        },
+        ...
+    ]
+    }
+
 # `/api/music-household`
+
+Response:
+
+    {
+        "relationships": {
+            "HAWKFIRE": {
+                "currentRelationships": [],
+                "pendingInvitations": [],
+                "remainingInvites": 5,
+                "selfRole": null,
+                "suggestedRelationships": []
+            }
+        }
+    }
 
 # `/api/photos/get-profile`
 
@@ -316,6 +392,45 @@ Response:
 # `/api/prime/get-prime-free-trial-offer?locationID=`
 
 # `/api/provider-preferences`
+
+Response:
+
+    {
+        "preferencesMap": {
+            "MUSIC": [
+                {
+                    "associated": true,
+                    "preferred": false,
+                    "providerId": "AMAZON_MUSIC",
+                    "providerName": "Amazon Music",
+                    "skillId": null
+                },
+                {
+                    "associated": true,
+                    "preferred": true,
+                    "providerId": "SPOTIFY",
+                    "providerName": "Spotify",
+                    "skillId": null
+                }
+            ],
+            "STATION": [
+                {
+                    "associated": true,
+                    "preferred": true,
+                    "providerId": "AMAZON_MUSIC",
+                    "providerName": "Amazon Music",
+                    "skillId": null
+                },
+                {
+                    "associated": true,
+                    "preferred": false,
+                    "providerId": "I_HEART_RADIO",
+                    "providerName": "iHeartRadio",
+                    "skillId": null
+                }
+            ]
+        }
+    }
 
 # `/api/resolve-device-address-v2`
 
