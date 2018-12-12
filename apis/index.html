@@ -58,163 +58,162 @@
     <a class="current" href="./">APIs</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#apiallowed-providers">/api/allowed-providers</a></li>
+    <li class="toctree-l2"><a href="#devices">Devices</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#apidevices">/api/devices/</a></li>
+        
+            <li><a class="toctree-l3" href="#apidevices-v2device">/api/devices-v2/device</a></li>
+        
+            <li><a class="toctree-l3" href="#apidevicesltalexa_device_type_groupgtltserial-numbergtdevicetype">/api/devices/&lt;ALEXA_DEVICE_TYPE_GROUP&gt;/&lt;serial-number&gt;/?deviceType=</a></li>
+        
+        </ul>
     
 
-    <li class="toctree-l2"><a href="#apiauthentication">/api/authentication</a></li>
+    <li class="toctree-l2"><a href="#alexa-preference">Alexa Preference</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#apiallowed-providers">/api/allowed-providers</a></li>
+        
+            <li><a class="toctree-l3" href="#apiprovider-preferences">/api/provider-preferences</a></li>
+        
+            <li><a class="toctree-l3" href="#communications">Communications</a></li>
+        
+            <li><a class="toctree-l3" href="#apicommunicationsproviders">/api/communications/providers</a></li>
+        
+            <li><a class="toctree-l3" href="#apitvlistingssettings">/api/tvlistings/settings</a></li>
+        
+            <li><a class="toctree-l3" href="#flash-briefing-content">Flash Briefing (content)</a></li>
+        
+            <li><a class="toctree-l3" href="#apicontent-skills">/api/content-skills</a></li>
+        
+            <li><a class="toctree-l3" href="#apicontent-skillsenabled-feeds">/api/content-skills/enabled-feeds</a></li>
+        
+            <li><a class="toctree-l3" href="#freetime">FreeTime</a></li>
+        
+            <li><a class="toctree-l3" href="#apifreetimechildrenwithgrantedvpc">/api/freeTime/childrenWithGrantedVpc</a></li>
+        
+            <li><a class="toctree-l3" href="#traffic">Traffic</a></li>
+        
+            <li><a class="toctree-l3" href="#apitrafficsettings">/api/traffic/settings</a></li>
+        
+            <li><a class="toctree-l3" href="#apitrafficsuggest">/api/traffic/suggest</a></li>
+        
+            <li><a class="toctree-l3" href="#lists">Lists</a></li>
+        
+            <li><a class="toctree-l3" href="#apilistslinkedpartners">/api/lists/linkedPartners</a></li>
+        
+            <li><a class="toctree-l3" href="#apilistslistpartners">/api/lists/listPartners</a></li>
+        
+        </ul>
     
 
-    <li class="toctree-l2"><a href="#apiavailable-mid-field">/api/available-mid-field</a></li>
+    <li class="toctree-l2"><a href="#general">General</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#voice-responses">Voice Responses</a></li>
+        
+            <li><a class="toctree-l3" href="#apivoice-responses">api/voice-responses</a></li>
+        
+        </ul>
     
 
-    <li class="toctree-l2"><a href="#apibluetooth">/api/bluetooth</a></li>
+    <li class="toctree-l2"><a href="#todo">TODO</a></li>
     
-
-    <li class="toctree-l2"><a href="#apibluetoothcancel-pairing-mode">/api/bluetooth/cancel-pairing-mode</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apibluetoothdisconnect-sinkk">/api/bluetooth/disconnect-sink/{k}/</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apibluetoothinitiate-scan-for-sinks">/api/bluetooth/initiate-scan-for-sinks</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apibluetoothinitiate-scan-for-sinksdevicetypeiddeviceserialnumber">/api/bluetooth/initiate-scan-for-sinks/{deviceTypeId}/{deviceSerialNumber}</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apibluetoothpair-sinks">/api/bluetooth/pair-sink/{s}/</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apibluetoothunpair-sink">/api/bluetooth/unpair-sink/</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apibluetoothunpair-sinkdevicetypeiddeviceserialnumber">/api/bluetooth/unpair-sink/{deviceTypeId}/{deviceSerialNumber}</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apicalendaraccount">/api/calendar/account</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apicommunications">/api/communications</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apicustomer-status">/api/customer-status</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apidevices-v2device">/api/devices-v2/device</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apidevices">/api/devices/</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apidevicesalexa_device_type_group-dserial-devicetype">/api/devices/{ALEXA_DEVICE_TYPE_GROUP}/ + d.serial + ?deviceType=</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apieonhouseholdaccounts">/api/eon/householdaccounts</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiexternal-auth">/api/external-auth</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiexternal-authlink-url">/api/external-auth/link-url</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiget-available-countries-for-connect">/api/get-available-countries-for-connect</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiget-customer-pfm">/api/get-customer-pfm</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiget-languages">/api/get-languages</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apihouseholdcsrftokenhouseholdoperationname-a-sessionid">/api/household/CSRFToken?householdOperationName= + a + ;sessionId=</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiiheartradiopreferences">/api/iheartradio/preferences</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiiheartradioregistration-code">/api/iheartradio/registration-code</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilemur">/api/lemur</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilemuraccess">/api/lemur/access/</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilemurconspiracy">/api/lemur/conspiracy</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilemurconspiracy2">/api/lemur/conspiracy2</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilistsfetchuserpreference">/api/lists/fetchUserPreference</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilistslinkedpartners">/api/lists/linkedPartners</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apilistslistpartners">/api/lists/listPartners</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apimusic-household">/api/music-household</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiphotosget-profile">/api/photos/get-profile</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiping">/api/ping</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apipoptartdefault-device">/api/poptart/default-device</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiprimeget-prime-free-trial-eligibility">/api/prime/get-prime-free-trial-eligibility</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiprimeget-prime-free-trial-offerlocationid">/api/prime/get-prime-free-trial-offer?locationID=</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiprovider-preferences">/api/provider-preferences</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiresolve-device-address-v2">/api/resolve-device-address-v2</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apisalmonpreferences">/api/salmon/preferences</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apispeakersmusic-linking">/api/speakers/music-linking</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apitrafficsettings">/api/traffic/settings</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apittsaudiodata">/api/tts/audio/data</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apitvlistingssettings">/api/tvlistings/settings</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiutteranceaudiodata">/api/utterance/audio/data</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiutteranceaudiodataid">/api/utterance/audio/data?id=</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiverify-account">/api/verify-account</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apivideo-thisdevicetype">/api/video/ + this.deviceType + /</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiwake-word">/api/wake-word</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiwake-words-downloaded">/api/wake-words-downloaded</a></li>
-    
-
-    <li class="toctree-l2"><a href="#apiwake-words-locale">/api/wake-words-locale</a></li>
+        <ul>
+        
+            <li><a class="toctree-l3" href="#apiauthentication">/api/authentication</a></li>
+        
+            <li><a class="toctree-l3" href="#apiavailable-mid-field">/api/available-mid-field</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetooth">/api/bluetooth</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothcancel-pairing-mode">/api/bluetooth/cancel-pairing-mode</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothdisconnect-sinkk">/api/bluetooth/disconnect-sink/{k}/</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothinitiate-scan-for-sinks">/api/bluetooth/initiate-scan-for-sinks</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothinitiate-scan-for-sinksdevicetypeiddeviceserialnumber">/api/bluetooth/initiate-scan-for-sinks/{deviceTypeId}/{deviceSerialNumber}</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothpair-sinks">/api/bluetooth/pair-sink/{s}/</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothunpair-sink">/api/bluetooth/unpair-sink/</a></li>
+        
+            <li><a class="toctree-l3" href="#apibluetoothunpair-sinkdevicetypeiddeviceserialnumber">/api/bluetooth/unpair-sink/{deviceTypeId}/{deviceSerialNumber}</a></li>
+        
+            <li><a class="toctree-l3" href="#apicalendaraccount">/api/calendar/account</a></li>
+        
+            <li><a class="toctree-l3" href="#apicustomer-status">/api/customer-status</a></li>
+        
+            <li><a class="toctree-l3" href="#apieonhouseholdaccounts">/api/eon/householdaccounts</a></li>
+        
+            <li><a class="toctree-l3" href="#apiexternal-auth">/api/external-auth</a></li>
+        
+            <li><a class="toctree-l3" href="#apiexternal-authlink-url">/api/external-auth/link-url</a></li>
+        
+            <li><a class="toctree-l3" href="#apiget-available-countries-for-connect">/api/get-available-countries-for-connect</a></li>
+        
+            <li><a class="toctree-l3" href="#apiget-customer-pfm">/api/get-customer-pfm</a></li>
+        
+            <li><a class="toctree-l3" href="#apiget-languages">/api/get-languages</a></li>
+        
+            <li><a class="toctree-l3" href="#apihouseholdcsrftokenhouseholdoperationname-a-sessionid">/api/household/CSRFToken?householdOperationName= + a + ;sessionId=</a></li>
+        
+            <li><a class="toctree-l3" href="#apiiheartradiopreferences">/api/iheartradio/preferences</a></li>
+        
+            <li><a class="toctree-l3" href="#apiiheartradioregistration-code">/api/iheartradio/registration-code</a></li>
+        
+            <li><a class="toctree-l3" href="#apilemur">/api/lemur</a></li>
+        
+            <li><a class="toctree-l3" href="#apilemuraccess">/api/lemur/access/</a></li>
+        
+            <li><a class="toctree-l3" href="#apilemurconspiracy">/api/lemur/conspiracy</a></li>
+        
+            <li><a class="toctree-l3" href="#apilemurconspiracy2">/api/lemur/conspiracy2</a></li>
+        
+            <li><a class="toctree-l3" href="#apilistsfetchuserpreference">/api/lists/fetchUserPreference</a></li>
+        
+            <li><a class="toctree-l3" href="#apimusic-household">/api/music-household</a></li>
+        
+            <li><a class="toctree-l3" href="#apiphotosget-profile">/api/photos/get-profile</a></li>
+        
+            <li><a class="toctree-l3" href="#apiping">/api/ping</a></li>
+        
+            <li><a class="toctree-l3" href="#apipoptartdefault-device">/api/poptart/default-device</a></li>
+        
+            <li><a class="toctree-l3" href="#apiprimeget-prime-free-trial-eligibility">/api/prime/get-prime-free-trial-eligibility</a></li>
+        
+            <li><a class="toctree-l3" href="#apiprimeget-prime-free-trial-offerlocationid">/api/prime/get-prime-free-trial-offer?locationID=</a></li>
+        
+            <li><a class="toctree-l3" href="#apiresolve-device-address-v2">/api/resolve-device-address-v2</a></li>
+        
+            <li><a class="toctree-l3" href="#apisalmonpreferences">/api/salmon/preferences</a></li>
+        
+            <li><a class="toctree-l3" href="#apispeakersmusic-linking">/api/speakers/music-linking</a></li>
+        
+            <li><a class="toctree-l3" href="#apittsaudiodata">/api/tts/audio/data</a></li>
+        
+            <li><a class="toctree-l3" href="#apitvlistingssettings_1">/api/tvlistings/settings</a></li>
+        
+            <li><a class="toctree-l3" href="#apiutteranceaudiodata">/api/utterance/audio/data</a></li>
+        
+            <li><a class="toctree-l3" href="#apiutteranceaudiodataid">/api/utterance/audio/data?id=</a></li>
+        
+            <li><a class="toctree-l3" href="#apiverify-account">/api/verify-account</a></li>
+        
+            <li><a class="toctree-l3" href="#apivideodevicetype">/api/video/deviceType/</a></li>
+        
+            <li><a class="toctree-l3" href="#apiwake-word">/api/wake-word</a></li>
+        
+            <li><a class="toctree-l3" href="#apiwake-words-downloaded">/api/wake-words-downloaded</a></li>
+        
+            <li><a class="toctree-l3" href="#apiwake-words-locale">/api/wake-words-locale</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -257,21 +256,456 @@
           <div role="main">
             <div class="section">
               
-                <p>APIs</p>
-<h1 id="apiallowed-providers"><code>/api/allowed-providers</code></h1>
+                <h1 id="devices">Devices</h1>
+<h2 id="apidevices"><code>/api/devices/</code></h2>
+<h2 id="apidevices-v2device"><code>/api/devices-v2/device</code></h2>
+<p>GET parameters:</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>value/description</th>
+<th>required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cached</td>
+<td>false</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <p>Response:</p>
-<pre><code>{
-    "allowedProviders": ["MUSIC_SKILL","SPOTIFY","AMAZON_MUSIC",...]
+<pre><code class="json">{
+&quot;devices&quot;: [
+    {
+    &quot;accountName&quot;: &quot;Echo Dot&quot;,
+    &quot;appDeviceList&quot;: [],
+    &quot;capabilities&quot;: [
+        &quot;SUPPORTS_SOFTWARE_VERSION&quot;,
+        &quot;AMAZON_MUSIC&quot;,
+        &quot;AUDIBLE&quot;,
+        &quot;VOLUME_SETTING&quot;,
+        &quot;MUSIC_SKILL&quot;,
+        &quot;DEREGISTER_DEVICE&quot;,
+        &quot;SOUND_SETTINGS&quot;,
+        &quot;ACTIVE_AFTER_FRO&quot;,
+        &quot;CHANGE_NAME&quot;,
+        &quot;FAR_FIELD_WAKE_WORD&quot;,
+        &quot;TIMERS_AND_ALARMS&quot;,
+        &quot;LEMUR_ALPHA&quot;,
+        &quot;I_HEART_RADIO&quot;,
+        &quot;PAIR_REMOTE&quot;,
+        &quot;PAIR_BT_SINK&quot;,
+        &quot;VOICE_TRAINING&quot;,
+        &quot;TAHOE_BYOD&quot;,
+        &quot;DREAM_TRAINING&quot;,
+        &quot;SLEEP&quot;,
+        &quot;PANDORA&quot;,
+        &quot;SET_LOCALE&quot;,
+        &quot;AUDIO_PLAYER&quot;,
+        &quot;GADGETS&quot;,
+        &quot;POPTART&quot;,
+        &quot;UPDATE_WIFI&quot;,
+        &quot;DS_VOLUME_SETTING&quot;,
+        &quot;TUNE_IN&quot;,
+        &quot;KINDLE_BOOKS&quot;,
+        &quot;FLASH_BRIEFING&quot;,
+        &quot;SALMON&quot;,
+        &quot;SUPPORTS_CONNECTED_HOME&quot;,
+        &quot;MICROPHONE&quot;,
+        &quot;SUPPORTS_CONNECTED_HOME_ALL&quot;,
+        &quot;CUSTOM_ALARM_TONE&quot;,
+        &quot;REMINDERS&quot;,
+        &quot;REQUIRES_OOBE_FOR_SETUP&quot;,
+        &quot;EARCONS&quot;,
+        &quot;PERSISTENT_CONNECTION&quot;,
+        &quot;GOLDFISH&quot;,
+        &quot;PAIR_BT_SOURCE&quot;,
+        &quot;DEREGISTER_FACTORY_RESET&quot;
+    ],
+    &quot;charging&quot;: null,
+    &quot;clusterMembers&quot;: [],
+    &quot;deviceAccountId&quot;: &quot;XXXXXXXXXXXXX&quot;,
+    &quot;deviceFamily&quot;: &quot;ECHO&quot;,
+    &quot;deviceOwnerCustomerId&quot;: &quot;XXXXXXXXXXXXXX&quot;,
+    &quot;deviceType&quot;: &quot;XXXXXXXXXXXXXX&quot;,
+    &quot;deviceTypeFriendlyName&quot;: null,
+    &quot;essid&quot;: null,
+    &quot;language&quot;: null,
+    &quot;macAddress&quot;: null,
+    &quot;online&quot;: false,
+    &quot;parentClusters&quot;: [],
+    &quot;postalCode&quot;: null,
+    &quot;registrationId&quot;: null,
+    &quot;remainingBatteryLevel&quot;: null,
+    &quot;serialNumber&quot;: &quot;XXXXXXXXXXXXXXXX&quot;,
+    &quot;softwareVersion&quot;: &quot;000000000&quot;
+    },
+    {
+    &quot;accountName&quot;: &quot;echosim_BETA&quot;,
+    &quot;appDeviceList&quot;: [],
+    &quot;capabilities&quot;: [
+        &quot;AMAZON_MUSIC&quot;,
+        &quot;AUDIBLE&quot;,
+        &quot;AUDIO_PLAYER&quot;,
+        &quot;VOLUME_SETTING&quot;,
+        &quot;MUSIC_SKILL&quot;,
+        &quot;DEREGISTER_DEVICE&quot;,
+        &quot;TUNE_IN&quot;,
+        &quot;CHANGE_NAME&quot;,
+        &quot;KINDLE_BOOKS&quot;,
+        &quot;TIMERS_AND_ALARMS&quot;,
+        &quot;MICROPHONE&quot;,
+        &quot;I_HEART_RADIO&quot;,
+        &quot;PEONY&quot;,
+        &quot;SUPPORTS_CONNECTED_HOME_CLOUD_ONLY&quot;,
+        &quot;DREAM_TRAINING&quot;,
+        &quot;PERSISTENT_CONNECTION&quot;,
+        &quot;GOLDFISH&quot;,
+        &quot;SLEEP&quot;
+    ],
+    &quot;charging&quot;: null,
+    &quot;clusterMembers&quot;: [],
+    &quot;deviceAccountId&quot;: &quot;XXXXXXXXXXXXXX&quot;,
+    &quot;deviceFamily&quot;: &quot;UNKNOWN&quot;,
+    &quot;deviceOwnerCustomerId&quot;: &quot;XXXXXXXXXXXXXX&quot;,
+    &quot;deviceType&quot;: &quot;XXXXXXXXXXXXXX&quot;,
+    &quot;deviceTypeFriendlyName&quot;: &quot;echosim_BETA&quot;,
+    &quot;essid&quot;: null,
+    &quot;language&quot;: null,
+    &quot;macAddress&quot;: null,
+    &quot;online&quot;: false,
+    &quot;parentClusters&quot;: [],
+    &quot;postalCode&quot;: null,
+    &quot;registrationId&quot;: null,
+    &quot;remainingBatteryLevel&quot;: null,
+    &quot;serialNumber&quot;: &quot;xxxxxx&quot;,
+    &quot;softwareVersion&quot;: &quot;0&quot;
+    },
+    ...
+]
 }
 </code></pre>
-<h1 id="apiauthentication"><code>/api/authentication</code></h1>
-<h1 id="apiavailable-mid-field"><code>/api/available-mid-field</code></h1>
+
+<h2 id="apidevicesltalexa_device_type_groupgtltserial-numbergtdevicetype"><code>/api/devices/&lt;ALEXA_DEVICE_TYPE_GROUP&gt;/&lt;serial-number&gt;/?deviceType=</code></h2>
+<table>
+<thead>
+<tr>
+<th>param</th>
+<th>value/description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALEXA_DEVICE_TYPE_GROUP</td>
+<td><code>"app"</code></td>
+</tr>
+<tr>
+<td>serial-number</td>
+<td>device's serial number</td>
+</tr>
+</tbody>
+</table>
+<h1 id="alexa-preference">Alexa Preference</h1>
+<h2 id="apiallowed-providers"><code>/api/allowed-providers</code></h2>
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;allowedProviders&quot;: [&quot;MUSIC_SKILL&quot;,&quot;SPOTIFY&quot;,&quot;AMAZON_MUSIC&quot;,...]
+}
+</code></pre>
+
+<h2 id="apiprovider-preferences"><code>/api/provider-preferences</code></h2>
+<p>Response:</p>
+<pre><code>{
+    "preferencesMap": {
+        "MUSIC": [
+            {
+                "associated": true,
+                "preferred": false,
+                "providerId": "AMAZON_MUSIC",
+                "providerName": "Amazon Music",
+                "skillId": null
+            },
+            {
+                "associated": true,
+                "preferred": true,
+                "providerId": "SPOTIFY",
+                "providerName": "Spotify",
+                "skillId": null
+            }
+        ],
+        "STATION": [
+            {
+                "associated": true,
+                "preferred": true,
+                "providerId": "AMAZON_MUSIC",
+                "providerName": "Amazon Music",
+                "skillId": null
+            },
+            {
+                "associated": true,
+                "preferred": false,
+                "providerId": "I_HEART_RADIO",
+                "providerName": "iHeartRadio",
+                "skillId": null
+            }
+        ]
+    }
+}
+</code></pre>
+<h2 id="communications">Communications</h2>
+<h2 id="apicommunicationsproviders"><code>/api/communications/providers</code></h2>
+<p>Response:</p>
+<pre><code>{
+"cspList": [
+    {
+    "androidDeepLinkSupport": true,
+    "cspUserId": "not-linked",
+    "details": true,
+    "iconUrl": "a/url/here",
+    "id": "Lightyear",
+    "launchUrl": "https://skype.com",
+    "linked": false,
+    "name": "Skype",
+    "showWelcomeScreen": true,
+    "usePrefMethodExtAuthIos": true
+    }
+    ...
+]
+}
+</code></pre>
+<h2 id="apitvlistingssettings"><code>/api/tvlistings/settings</code></h2>
+<p>Response:</p>
+<pre><code>{
+"cableProvider": null,
+"providerNamesMap": {
+    "AT&amp;T U-verse": "AT&amp;T U-verse",
+    "Armstrong": "Armstrong",
+    "Atlantic Broadband LLC": "Atlantic Broadband",
+    "Broadstripe": "Broadstripe",
+    "Cable ONE": "Cable ONE",
+    "CenturyLink, Inc.": "CenturyLink",
+    "Charter Communications": "Spectrum",
+    "Comcast Corporation": "Comcast",
+    "Cox Communications": "Cox",
+    "DIRECTV": "DIRECTV",
+    "Dish Network, LLC": "Dish",
+    "Frontier Communications": "Frontier",
+    "Google Fiber": "Google Fiber",
+    "Mediacom LLC.": "Mediacom",
+    "Midcontinent Cable Company": "Midco",
+    "OPTIC Communications": "Optic HUB",
+    "Service Electric Cable TV &amp; Communications": "Service Electric",
+    "Time Warner Cable": "Time Warner Cable",
+    "Verizon FiOS": "FiOS",
+    "WideOpenWest": "WOW! TV",
+    "Windstream Communications": "Windstream"
+}
+}
+</code></pre>
+<h2 id="flash-briefing-content">Flash Briefing (content)</h2>
+<h2 id="apicontent-skills"><code>/api/content-skills</code></h2>
+<p>Return content skills the user has.</p>
+<p>Response:</p>
+<pre><code>{
+    "contentSkills": [
+        {
+            "feeds": [
+                {
+                    "feedId": {
+                        "value": "793d6df5-6962-4e39-9eb0-8135c5015db8"
+                    },
+                    "imageUrl": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/22a2ffe.d48b98d3.bda0ca22ce6c46d4b625ab4d9dd841ce/APP_ICON_LARGE?versionId=CcNqI.xPhATymJGMEoEa2SwtiSgV7aHN&amp;AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&amp;Expires=1546984239&amp;Signature=1jrhSvdNd8RnruTf1ucR9kLeyhk%3D",
+                    "name": "Reuters Now",
+                    "skillId": "amzn1.ask.skill.5ed629bb-1036-415b-986c-5d8e7042f3a2"
+                }
+            ],
+            "imageUrl": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/88d1d934118242bc9921b951160f70e4/APP_ICON?versionId=tOAeK0QFR6bR6Rg4lhiLIDAqanXcn8kO&amp;AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&amp;Expires=1546833438&amp;Signature=LDlFQya%2B3V%2BOgThwr1ghZuu%2BI1U%3D",
+            "name": "Reuters TV (U.S.)",
+            "skillId": "amzn1.ask.skill.5ed629bb-1036-415b-986c-5d8e7042f3a2"
+        },
+        {
+            "feeds": [
+                {
+                    "feedId": {
+                        "value": "a07ebb8e-73eb-4eec-a044-5905e975357c"
+                    },
+                    "imageUrl": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/b8a1c2b3.d48b98d3.d72df964d707419e826aec46b4b5fdfc/APP_ICON_LARGE?versionId=dGujNHC7PiTTHbRAQ3FxZcW_7.GxWVmD&amp;AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&amp;Expires=1546984170&amp;Signature=9b8nzf8J0wpSMqrxbvy5igQIiZg%3D",
+                    "name": "Today's Forecast",
+                    "skillId": "amzn1.ask.skill.c86d0fa8-0307-471b-82af-aa71b816acc4"
+                }
+            ],
+            "imageUrl": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c1e8cd28e8814ebba2a25880f05db383/APP_ICON?versionId=GvRF5SR22UmX.O_v04zFK..44NI6kcQP&amp;AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&amp;Expires=1546811531&amp;Signature=w3xRSAbVwgqovodaui0ZGWsADy8%3D",
+            "name": "Weather",
+            "skillId": "amzn1.ask.skill.c86d0fa8-0307-471b-82af-aa71b816acc4"
+        }
+    ]
+}
+</code></pre>
+<h2 id="apicontent-skillsenabled-feeds"><code>/api/content-skills/enabled-feeds</code></h2>
+<p>Methods: <a href="#enabled-feeds-get">GET</a>, <a href="#enabled-feeds-post">POST</a></p>
+<p><a name="enabled-feeds-get"></a>GET: Return content feeds the user enabled</p>
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;enabledFeeds&quot;: [
+        {
+            &quot;feedId&quot;: {
+                &quot;value&quot;: &quot;793d6df5-6962-4e39-9eb0-8135c5015db8&quot;
+            },
+            &quot;imageUrl&quot;: &quot;https://s3.amazonaws.com/CAPS-SSE/echo_developer/22a2ffe.d48b98d3.bda0ca22ce6c46d4b625ab4d9dd841ce/APP_ICON_LARGE?versionId=CcNqI.xPhATymJGMEoEa2SwtiSgV7aHN&amp;AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&amp;Expires=1546984239&amp;Signature=1jrhSvdNd8RnruTf1ucR9kLeyhk%3D&quot;,
+            &quot;name&quot;: &quot;Reuters Now&quot;,
+            &quot;skillId&quot;: &quot;amzn1.ask.skill.5ed629bb-1036-415b-986c-5d8e7042f3a2&quot;
+        },
+        {
+            &quot;feedId&quot;: {
+                &quot;value&quot;: &quot;a07ebb8e-73eb-4eec-a044-5905e975357c&quot;
+            },
+            &quot;imageUrl&quot;: &quot;https://s3.amazonaws.com/CAPS-SSE/echo_developer/b8a1c2b3.d48b98d3.d72df964d707419e826aec46b4b5fdfc/APP_ICON_LARGE?versionId=dGujNHC7PiTTHbRAQ3FxZcW_7.GxWVmD&amp;AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&amp;Expires=1546984170&amp;Signature=9b8nzf8J0wpSMqrxbvy5igQIiZg%3D&quot;,
+            &quot;name&quot;: &quot;Today's Forecast&quot;,
+            &quot;skillId&quot;: &quot;amzn1.ask.skill.c86d0fa8-0307-471b-82af-aa71b816acc4&quot;
+        }
+    ]
+}
+</code></pre>
+
+<p><a name="enabled-feeds-post"></a>POST Params:</p>
+<pre><code class="json">&quot;enabledFeeds&quot;: [
+    {
+    &quot;feedId&quot;: { &quot;value&quot;:  },
+    &quot;skillId&quot;:
+    },
+    {
+    &quot;feedId&quot;: { &quot;value&quot;:  },
+    &quot;skillId&quot;:
+    }
+]
+</code></pre>
+
+<h2 id="freetime">FreeTime</h2>
+<h2 id="apifreetimechildrenwithgrantedvpc"><code>/api/freeTime/childrenWithGrantedVpc</code></h2>
+<h2 id="traffic">Traffic</h2>
+<h2 id="apitrafficsettings"><code>/api/traffic/settings</code></h2>
+<p>Methods: GET, POST</p>
+<p>GET response:</p>
+<pre><code>{
+    "destination": {
+        "addressId": "",
+        "addressLine1": "",
+        "addressLine2": "",
+        "addressLine3": "",
+        "city": "",
+        "countryCode": "US",
+        "county": "",
+        "label": "`street` `city`, `state` `zipcode`",
+        "placeId": null,
+        "settingsAddressType": null,
+        "state": "",
+        "stationName": null,
+        "street": "",
+        "zipcode": ""
+    },
+    "origin": {
+        "addressId": "",
+        "addressLine1": "",
+        "addressLine2": "",
+        "addressLine3": "",
+        "city": "",
+        "countryCode": "US",
+        "county": "",
+        "label": "`street` `city`, `state` `zipcode`",
+        "placeId": null,
+        "settingsAddressType": null,
+        "state": "",
+        "stationName": null,
+        "street": "",
+        "zipcode": ""
+    },
+    "preferredTransportMode": "CAR",
+    "transportNames": null,
+    "waypoints": []
+}
+</code></pre>
+<p>POST params:</p>
+<h2 id="apitrafficsuggest"><code>/api/traffic/suggest</code></h2>
+<p>Methods: GET</p>
+<p>GET params:</p>
+<table>
+<thead>
+<tr>
+<th>param</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q</td>
+<td>some address</td>
+</tr>
+<tr>
+<td>suggestionType</td>
+<td>LOCATION_ADDRESS</td>
+</tr>
+</tbody>
+</table>
+<p>GET response:</p>
+<pre><code>{
+    "suggestionList": [
+        {
+            "internalLabel": "",
+            "label": "",
+            "placeId": null
+        }
+    ]
+}
+</code></pre>
+<h2 id="lists">Lists</h2>
+<h2 id="apilistslinkedpartners"><code>/api/lists/linkedPartners</code></h2>
+<p>List linked list partners.</p>
+<h2 id="apilistslistpartners"><code>/api/lists/listPartners</code></h2>
+<p>List TODO list partners. Such as: Any.do, AnyList, Cozi Lists, Picniic, Todoist.</p>
+<p>Response:</p>
+<pre><code>{
+"listPartners": [
+    {
+    "amazonStoreURL": null,
+    "appId": "amzn1.ask.skill.5858c12a-c55c-4a1b-b59c-f7f6bfdf22ed",
+    "appStoreURL": null,
+    "linkingFlowAmazonDeepLinkURL": null,
+    "linkingFlowAndroidDeepLinkURL": null,
+    "linkingFlowIOSDeepLinkURL": null,
+    "linkingFlowWebURL": "skills/dp/B074X3JRHL/?ref=skill_dsk_skb_sr_0",
+    "logoImageURL": "https://images-na.ssl-images-amazon.com/images/I/41y53Nnp+wL.png",
+    "name": "Any.do",
+    "playStoreURL": null,
+    "webURL": null
+    },
+    ...
+]
+}
+</code></pre>
+<h1 id="general">General</h1>
+<h2 id="voice-responses">Voice Responses</h2>
+<h2 id="apivoice-responses"><code>api/voice-responses</code></h2>
+<p>Methods: GET, POST</p>
+<p>GET:</p>
+<p>If brief mode is on, <code>TERSE</code> will be listed in <code>promptModes</code></p>
+<p>GET response:</p>
+<pre><code>{
+    "promptModes": []
+}
+</code></pre>
+<p>POST:</p>
+<h1 id="todo">TODO</h1>
+<h2 id="apiauthentication"><code>/api/authentication</code></h2>
+<h2 id="apiavailable-mid-field"><code>/api/available-mid-field</code></h2>
 <p>Response:</p>
 <pre><code>{
     "midFieldStates":null
 }
 </code></pre>
-<h1 id="apibluetooth"><code>/api/bluetooth</code></h1>
+<h2 id="apibluetooth"><code>/api/bluetooth</code></h2>
 <p>Response:</p>
 <pre><code>{
     "bluetoothStates":[
@@ -291,16 +725,15 @@
     ]
 }
 </code></pre>
-<h1 id="apibluetoothcancel-pairing-mode"><code>/api/bluetooth/cancel-pairing-mode</code></h1>
-<h1 id="apibluetoothdisconnect-sinkk"><code>/api/bluetooth/disconnect-sink/{k}/</code></h1>
-<h1 id="apibluetoothinitiate-scan-for-sinks"><code>/api/bluetooth/initiate-scan-for-sinks</code></h1>
-<h1 id="apibluetoothinitiate-scan-for-sinksdevicetypeiddeviceserialnumber"><code>/api/bluetooth/initiate-scan-for-sinks/{deviceTypeId}/{deviceSerialNumber}</code></h1>
-<h1 id="apibluetoothpair-sinks"><code>/api/bluetooth/pair-sink/{s}/</code></h1>
-<h1 id="apibluetoothunpair-sink"><code>/api/bluetooth/unpair-sink/</code></h1>
-<h1 id="apibluetoothunpair-sinkdevicetypeiddeviceserialnumber"><code>/api/bluetooth/unpair-sink/{deviceTypeId}/{deviceSerialNumber}</code></h1>
-<h1 id="apicalendaraccount"><code>/api/calendar/account</code></h1>
-<h1 id="apicommunications"><code>/api/communications</code></h1>
-<h1 id="apicustomer-status"><code>/api/customer-status</code></h1>
+<h2 id="apibluetoothcancel-pairing-mode"><code>/api/bluetooth/cancel-pairing-mode</code></h2>
+<h2 id="apibluetoothdisconnect-sinkk"><code>/api/bluetooth/disconnect-sink/{k}/</code></h2>
+<h2 id="apibluetoothinitiate-scan-for-sinks"><code>/api/bluetooth/initiate-scan-for-sinks</code></h2>
+<h2 id="apibluetoothinitiate-scan-for-sinksdevicetypeiddeviceserialnumber"><code>/api/bluetooth/initiate-scan-for-sinks/{deviceTypeId}/{deviceSerialNumber}</code></h2>
+<h2 id="apibluetoothpair-sinks"><code>/api/bluetooth/pair-sink/{s}/</code></h2>
+<h2 id="apibluetoothunpair-sink"><code>/api/bluetooth/unpair-sink/</code></h2>
+<h2 id="apibluetoothunpair-sinkdevicetypeiddeviceserialnumber"><code>/api/bluetooth/unpair-sink/{deviceTypeId}/{deviceSerialNumber}</code></h2>
+<h2 id="apicalendaraccount"><code>/api/calendar/account</code></h2>
+<h2 id="apicustomer-status"><code>/api/customer-status</code></h2>
 <p>Response:</p>
 <pre><code>{
     "countryOfResidenceSet":true,
@@ -312,174 +745,57 @@
     "tutorialComplete":false
 }
 </code></pre>
-<h1 id="apidevices-v2device"><code>/api/devices-v2/device</code></h1>
-<p>GET parameters:</p>
+<h2 id="apieonhouseholdaccounts"><code>/api/eon/householdaccounts</code></h2>
+<h2 id="apiexternal-auth"><code>/api/external-auth</code></h2>
+<h2 id="apiexternal-authlink-url"><code>/api/external-auth/link-url</code></h2>
+<h2 id="apiget-available-countries-for-connect"><code>/api/get-available-countries-for-connect</code></h2>
+<p>Response:</p>
 <table>
 <thead>
 <tr>
-<th>parameter</th>
-<th>value/description</th>
-<th>required</th>
+<th>countryCode</th>
+<th>dialingCode</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>cached</td>
-<td>false</td>
-<td>no</td>
+<td>DE</td>
+<td>+49</td>
+</tr>
+<tr>
+<td>GI</td>
+<td>+350</td>
+</tr>
+<tr>
+<td>AT</td>
+<td>+43</td>
+</tr>
+<tr>
+<td>GB</td>
+<td>+44</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>+353</td>
+</tr>
+<tr>
+<td>US</td>
+<td>+1</td>
 </tr>
 </tbody>
 </table>
-<p>Response:</p>
-<pre><code>{
-"devices": [
-    {
-    "accountName": "Echo Dot",
-    "appDeviceList": [],
-    "capabilities": [
-        "SUPPORTS_SOFTWARE_VERSION",
-        "AMAZON_MUSIC",
-        "AUDIBLE",
-        "VOLUME_SETTING",
-        "MUSIC_SKILL",
-        "DEREGISTER_DEVICE",
-        "SOUND_SETTINGS",
-        "ACTIVE_AFTER_FRO",
-        "CHANGE_NAME",
-        "FAR_FIELD_WAKE_WORD",
-        "TIMERS_AND_ALARMS",
-        "LEMUR_ALPHA",
-        "I_HEART_RADIO",
-        "PAIR_REMOTE",
-        "PAIR_BT_SINK",
-        "VOICE_TRAINING",
-        "TAHOE_BYOD",
-        "DREAM_TRAINING",
-        "SLEEP",
-        "PANDORA",
-        "SET_LOCALE",
-        "AUDIO_PLAYER",
-        "GADGETS",
-        "POPTART",
-        "UPDATE_WIFI",
-        "DS_VOLUME_SETTING",
-        "TUNE_IN",
-        "KINDLE_BOOKS",
-        "FLASH_BRIEFING",
-        "SALMON",
-        "SUPPORTS_CONNECTED_HOME",
-        "MICROPHONE",
-        "SUPPORTS_CONNECTED_HOME_ALL",
-        "CUSTOM_ALARM_TONE",
-        "REMINDERS",
-        "REQUIRES_OOBE_FOR_SETUP",
-        "EARCONS",
-        "PERSISTENT_CONNECTION",
-        "GOLDFISH",
-        "PAIR_BT_SOURCE",
-        "DEREGISTER_FACTORY_RESET"
-    ],
-    "charging": null,
-    "clusterMembers": [],
-    "deviceAccountId": "XXXXXXXXXXXXX",
-    "deviceFamily": "ECHO",
-    "deviceOwnerCustomerId": "XXXXXXXXXXXXXX",
-    "deviceType": "XXXXXXXXXXXXXX",
-    "deviceTypeFriendlyName": null,
-    "essid": null,
-    "language": null,
-    "macAddress": null,
-    "online": false,
-    "parentClusters": [],
-    "postalCode": null,
-    "registrationId": null,
-    "remainingBatteryLevel": null,
-    "serialNumber": "XXXXXXXXXXXXXXXX",
-    "softwareVersion": "000000000"
-    },
-    {
-    "accountName": "echosim_BETA",
-    "appDeviceList": [],
-    "capabilities": [
-        "AMAZON_MUSIC",
-        "AUDIBLE",
-        "AUDIO_PLAYER",
-        "VOLUME_SETTING",
-        "MUSIC_SKILL",
-        "DEREGISTER_DEVICE",
-        "TUNE_IN",
-        "CHANGE_NAME",
-        "KINDLE_BOOKS",
-        "TIMERS_AND_ALARMS",
-        "MICROPHONE",
-        "I_HEART_RADIO",
-        "PEONY",
-        "SUPPORTS_CONNECTED_HOME_CLOUD_ONLY",
-        "DREAM_TRAINING",
-        "PERSISTENT_CONNECTION",
-        "GOLDFISH",
-        "SLEEP"
-    ],
-    "charging": null,
-    "clusterMembers": [],
-    "deviceAccountId": "XXXXXXXXXXXXXX",
-    "deviceFamily": "UNKNOWN",
-    "deviceOwnerCustomerId": "XXXXXXXXXXXXXX",
-    "deviceType": "XXXXXXXXXXXXXX",
-    "deviceTypeFriendlyName": "echosim_BETA",
-    "essid": null,
-    "language": null,
-    "macAddress": null,
-    "online": false,
-    "parentClusters": [],
-    "postalCode": null,
-    "registrationId": null,
-    "remainingBatteryLevel": null,
-    "serialNumber": "xxxxxx",
-    "softwareVersion": "0"
-    },
-    ...
-]
-}
-</code></pre>
-<h1 id="apidevices"><code>/api/devices/</code></h1>
-<h1 id="apidevicesalexa_device_type_group-dserial-devicetype"><code>/api/devices/{ALEXA_DEVICE_TYPE_GROUP}/</code> + d.serial + <code>?deviceType=</code></h1>
-<h1 id="apieonhouseholdaccounts"><code>/api/eon/householdaccounts</code></h1>
-<h1 id="apiexternal-auth"><code>/api/external-auth</code></h1>
-<h1 id="apiexternal-authlink-url"><code>/api/external-auth/link-url</code></h1>
-<h1 id="apiget-available-countries-for-connect"><code>/api/get-available-countries-for-connect</code></h1>
-<p>Response:</p>
 <pre><code>{
 "availableCountries": [
     {
     "countryCode": "DE",
     "dialingCode": "+49"
     },
-    {
-    "countryCode": "GI",
-    "dialingCode": "+350"
-    },
-    {
-    "countryCode": "AT",
-    "dialingCode": "+43"
-    },
-    {
-    "countryCode": "GB",
-    "dialingCode": "+44"
-    },
-    {
-    "countryCode": "IE",
-    "dialingCode": "+353"
-    },
-    {
-    "countryCode": "US",
-    "dialingCode": "+1"
-    }
+    ...
 ]
 }
 </code></pre>
-<h1 id="apiget-customer-pfm"><code>/api/get-customer-pfm</code></h1>
-<p>Get customer's personal finantial market (?)</p>
+<h2 id="apiget-customer-pfm"><code>/api/get-customer-pfm</code></h2>
+<p>Get customer's <strong>p</strong>ersonal <strong>f</strong>inantial <strong>m</strong>arket (?)</p>
 <p>TODO: all market place ids</p>
 <p>Response:</p>
 <pre><code>{
@@ -490,9 +806,51 @@
 "marketPlaceLocale": "en-US"
 }
 </code></pre>
-<h1 id="apiget-languages"><code>/api/get-languages</code></h1>
-<p>return available languages. Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP</p>
+<h2 id="apiget-languages"><code>/api/get-languages</code></h2>
+<p>return available languages.</p>
+<p>Currently supported locales: de-DE, en-US, en-CA, en-IN, es-ES, es-MX, it-IT, en-AU, fr-FR, en-GB, ja-JP</p>
 <p>Response:</p>
+<table>
+<thead>
+<tr>
+<th>languageCountryCode</th>
+<th>languageName</th>
+<th>locale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DE</td>
+<td>Deutsch</td>
+<td>de-DE</td>
+</tr>
+<tr>
+<td>US</td>
+<td>English (United States)</td>
+<td>en-US</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>English (Canada)</td>
+<td>de-CA</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>English (Canada)</td>
+<td>de-CA</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>English (Canada)</td>
+<td>de-CA</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>English (Canada)</td>
+<td>de-CA</td>
+</tr>
+</tbody>
+</table>
 <pre><code>{
 "availableLanguages": [
     {
@@ -505,54 +863,67 @@
     "languageName": "English (United States)",
     "locale": "en-US"
     },
-    {
-    "languageCountryCode": "CA",
-    "languageName": "English (Canada)",
-    "locale": "en-CA"
-    },
     ...
 ]
 }
 </code></pre>
-<h1 id="apihouseholdcsrftokenhouseholdoperationname-a-sessionid"><code>/api/household/CSRFToken?householdOperationName=</code> + a + <code>;sessionId=</code></h1>
-<h1 id="apiiheartradiopreferences"><code>/api/iheartradio/preferences</code></h1>
-<h1 id="apiiheartradioregistration-code"><code>/api/iheartradio/registration-code</code></h1>
-<h1 id="apilemur"><code>/api/lemur</code></h1>
-<h1 id="apilemuraccess"><code>/api/lemur/access/</code></h1>
-<h1 id="apilemurconspiracy"><code>/api/lemur/conspiracy</code></h1>
-<h1 id="apilemurconspiracy2"><code>/api/lemur/conspiracy2</code></h1>
-<h1 id="apilistsfetchuserpreference"><code>/api/lists/fetchUserPreference</code></h1>
-<h1 id="apilistslinkedpartners"><code>/api/lists/linkedPartners</code></h1>
-<h1 id="apilistslistpartners"><code>/api/lists/listPartners</code></h1>
-<h1 id="apimusic-household"><code>/api/music-household</code></h1>
-<h1 id="apiphotosget-profile"><code>/api/photos/get-profile</code></h1>
-<h1 id="apiping"><code>/api/ping</code></h1>
+<h2 id="apihouseholdcsrftokenhouseholdoperationname-a-sessionid"><code>/api/household/CSRFToken?householdOperationName=</code> + a + <code>;sessionId=</code></h2>
+<h2 id="apiiheartradiopreferences"><code>/api/iheartradio/preferences</code></h2>
+<h2 id="apiiheartradioregistration-code"><code>/api/iheartradio/registration-code</code></h2>
+<h2 id="apilemur"><code>/api/lemur</code></h2>
+<h2 id="apilemuraccess"><code>/api/lemur/access/</code></h2>
+<h2 id="apilemurconspiracy"><code>/api/lemur/conspiracy</code></h2>
+<h2 id="apilemurconspiracy2"><code>/api/lemur/conspiracy2</code></h2>
+<h2 id="apilistsfetchuserpreference"><code>/api/lists/fetchUserPreference</code></h2>
+<p>Show user's list preference.</p>
+<p>Response:</p>
+<pre><code>{
+    "customerListPreference": {
+        "ShowDiscoverabilityPopup": false,
+        "customerId": "XXXXXXXXXXXXXX"
+    }
+}
+</code></pre>
+<h2 id="apimusic-household"><code>/api/music-household</code></h2>
+<p>Response:</p>
+<pre><code>{
+    "relationships": {
+        "HAWKFIRE": {
+            "currentRelationships": [],
+            "pendingInvitations": [],
+            "remainingInvites": 5,
+            "selfRole": null,
+            "suggestedRelationships": []
+        }
+    }
+}
+</code></pre>
+<h2 id="apiphotosget-profile"><code>/api/photos/get-profile</code></h2>
+<h2 id="apiping"><code>/api/ping</code></h2>
 <p>Response:</p>
 <pre><code>healthy
 </code></pre>
-<h1 id="apipoptartdefault-device"><code>/api/poptart/default-device</code></h1>
-<h1 id="apiprimeget-prime-free-trial-eligibility"><code>/api/prime/get-prime-free-trial-eligibility</code></h1>
-<h1 id="apiprimeget-prime-free-trial-offerlocationid"><code>/api/prime/get-prime-free-trial-offer?locationID=</code></h1>
-<h1 id="apiprovider-preferences"><code>/api/provider-preferences</code></h1>
-<h1 id="apiresolve-device-address-v2"><code>/api/resolve-device-address-v2</code></h1>
-<h1 id="apisalmonpreferences"><code>/api/salmon/preferences</code></h1>
-<h1 id="apispeakersmusic-linking"><code>/api/speakers/music-linking</code></h1>
-<h1 id="apitrafficsettings"><code>/api/traffic/settings</code></h1>
-<h1 id="apittsaudiodata"><code>/api/tts/audio/data</code></h1>
-<h1 id="apitvlistingssettings"><code>/api/tvlistings/settings</code></h1>
-<h1 id="apiutteranceaudiodata"><code>/api/utterance/audio/data</code></h1>
-<h1 id="apiutteranceaudiodataid"><code>/api/utterance/audio/data?id=</code></h1>
-<h1 id="apiverify-account"><code>/api/verify-account</code></h1>
-<h1 id="apivideo-thisdevicetype"><code>/api/video/</code> + this.deviceType + <code>/</code></h1>
-<h1 id="apiwake-word"><code>/api/wake-word</code></h1>
+<h2 id="apipoptartdefault-device"><code>/api/poptart/default-device</code></h2>
+<h2 id="apiprimeget-prime-free-trial-eligibility"><code>/api/prime/get-prime-free-trial-eligibility</code></h2>
+<h2 id="apiprimeget-prime-free-trial-offerlocationid"><code>/api/prime/get-prime-free-trial-offer?locationID=</code></h2>
+<h2 id="apiresolve-device-address-v2"><code>/api/resolve-device-address-v2</code></h2>
+<h2 id="apisalmonpreferences"><code>/api/salmon/preferences</code></h2>
+<h2 id="apispeakersmusic-linking"><code>/api/speakers/music-linking</code></h2>
+<h2 id="apittsaudiodata"><code>/api/tts/audio/data</code></h2>
+<h2 id="apitvlistingssettings_1"><code>/api/tvlistings/settings</code></h2>
+<h2 id="apiutteranceaudiodata"><code>/api/utterance/audio/data</code></h2>
+<h2 id="apiutteranceaudiodataid"><code>/api/utterance/audio/data?id=</code></h2>
+<h2 id="apiverify-account"><code>/api/verify-account</code></h2>
+<h2 id="apivideodevicetype"><code>/api/video/deviceType/</code></h2>
+<h2 id="apiwake-word"><code>/api/wake-word</code></h2>
 <p>Response:</p>
 <pre><code>{"wakeWords":[]}
 </code></pre>
-<h1 id="apiwake-words-downloaded"><code>/api/wake-words-downloaded</code></h1>
+<h2 id="apiwake-words-downloaded"><code>/api/wake-words-downloaded</code></h2>
 <p>Response:</p>
 <pre><code>{"message":null}
 </code></pre>
-<h1 id="apiwake-words-locale"><code>/api/wake-words-locale</code></h1>
+<h2 id="apiwake-words-locale"><code>/api/wake-words-locale</code></h2>
 <p>Response:</p>
 <pre><code>{"message":null}
 </code></pre>
