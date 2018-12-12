@@ -1,419 +1,403 @@
-Contants
+#Constants
 
-# `URL`: 
+### `URL`: 
 
-# `OOBE_URL`: 
+### `OOBE_URL`: 
 
-# `INDEX_URL`: "/spa/index.html"
+### `INDEX_URL`: "/spa/index.html"
 
-# `VOX_INDEX_URL`: "/spa/index.vox.html"
+### `VOX_INDEX_URL`: "/spa/index.vox.html"
 
-# `URL_DEVICE_API_LIST_HTTPS`: 
+### `URL_DEVICE_API_LIST_HTTPS`: 
 
-# `URL_DEVICE_API_LIST_HTTP`: 
+### `URL_DEVICE_API_LIST_HTTP`: 
 
-# `ACORN_DEVICE_SETUP_URL`: "http://10.201.126.241"
+### `ACORN_DEVICE_SETUP_URL`: "http://10.201.126.241"
 
-# `URL_DEFAULT_ALBUM_ART`: 
+### `URL_DEFAULT_ALBUM_ART`: 
 
-# `API_PREFIX`: "/api"
+### `API_PREFIX`: "/api"
 
-# `ID_RECENTLY_ADDED`: "RECENTLY-ADDED-V0-OBJECTID"
+### `ID_RECENTLY_ADDED`: "RECENTLY-ADDED-V0-OBJECTID"
 
-# `ID_PURCHASED`: "PURCHASES-V0-OBJECTID"
+### `ID_PURCHASED`: "PURCHASES-V0-OBJECTID"
 
-# `ID_IMPORTED`: "IMPORTED-V0-OBJECTID"
+### `ID_IMPORTED`: "IMPORTED-V0-OBJECTID"
 
-# `URL_UTTERANCE_BASE`: f + "/api/utterance/audio/data"
+### `URL_UTTERANCE_BASE`: f + "/api/utterance/audio/data"
 
-# `URL_UTTERANCE_SUFFIX`: g.is("IE") ? "&flv=true" : ""
+### `URL_UTTERANCE_SUFFIX`: g.is("IE") ? "&flv=true" : ""
 
-# `UTTERANCE_CONTENT_TYPE`: g.is("IE") ? "video/x-flv" : "audio/wav"
+### `UTTERANCE_CONTENT_TYPE`: g.is("IE") ? "video/x-flv" : "audio/wav"
 
-# `URL_TTS_BASE`: f + "/api/tts/audio/data"
+### `URL_TTS_BASE`: f + "/api/tts/audio/data"
 
-# `KEY_FRAGMENT`: "hash"
+### `KEY_FRAGMENT`: "hash"
 
-# `KEY_SELECTED_DEVICE`: "selectedDevice"
+### `KEY_SELECTED_DEVICE`: "selectedDevice"
 
-# `KEY_DISTANCE_BETWEEN_DEVICE_AND_WALL`: "distanceBetweenDeviceAndWall"
+### `KEY_DISTANCE_BETWEEN_DEVICE_AND_WALL`: "distanceBetweenDeviceAndWall"
 
-# `KEY_IS_DEVICE_IN_CORNER`: "isDeviceInCorner"
+### `KEY_IS_DEVICE_IN_CORNER`: "isDeviceInCorner"
 
-# `TXT_DOPPLER_DEVICE_TYPE`: "AB72C64C86AW2"
+## DEVICE_TYPEs
 
-# `TXT_DOT_DEVICE_TYPE`: "AKNO1N0KSFN8L"
+| device brand | DEVICE_TYPE | found in constant name |
+| --- | --- | --- |
+| DOPPLER | AB72C64C86AW2 | `TXT_DOPPLER_DEVICE_TYPE` |
+| DOT | AKNO1N0KSFN8L | `TXT_DOT_DEVICE_TYPE` |
+| TAP | A38949IHXHRQ5P | `TXT_TAP_DEVICE_TYPE` |
+| BISCUIT | A3S5BH2HU6VAYF | `TXT_BISCUIT_DEVICE_TYPE` |
+| BISCUIT_WHITE | APF889O5V4GVL | `TXT_BISCUIT_WHITE_DEVICE_TYPE` |
+| COLEMAN | A2UMIHMVDEPBPG | `TXT_COLEMAN_DEVICE_TYPE` |
+| KIMBALL | A32DOYMUN6DTXA | `TXT_KIMBALL_DEVICE_TYPE` |
+| MARSALIS | A27VEYGQBW3YR5 | `TXT_MARSALIS_DEVICE_TYPE` |
+| JOPLIN | A3SSG6GR8UU7SN | `TXT_JOPLIN_DEVICE_TYPE` |
+| BRUBECK | A2RU4B77X9R9NZ | `TXT_BRUBECK_DEVICE_TYPE` |
+| MINGUS | AWZZ5CVHX2CD | `TXT_MINGUS_DEVICE_TYPE` |
+| KNIGHT | A1NL4BVLQ4L3N3 | `TXT_KNIGHT_DEVICE_TYPE` |
+| KNIGHT_TACHYON | A2EGX4J3OKQG5G | `TXT_KNIGHT_TACHYON_DEVICE_TYPE` |
+| GOODMAN | A18O6U1UQFJ0XK | `TXT_GOODMAN_DEVICE_TYPE` |
+| SONAR | A2M35JJZWCQOMZ | `TXT_SONAR_DEVICE_TYPE` |
+| RADAR | A7WXQPH584YP | `TXT_RADAR_DEVICE_TYPE` |
+| ROOK | A10A33FOX2NUBK | `TXT_ROOK_DEVICE_TYPE` |
+| STARK | A3HF4YRA2L7XGC | `TXT_STARK_DEVICE_TYPE` |
+| HANCOCK | A1JJ0KFC4ZPNJ3 | `TXT_HANCOCK_DEVICE_TYPE` |
+| MULLIGAN | A1RABVCI4QCIKC | `TXT_MULLIGAN_DEVICE_TYPE` |
+| HENDERSON | A303PJF6ISQ7IC | `TXT_HENDERSON_DEVICE_TYPE` |
+| LEFT_EARRING | A2IGSRU5WQUW9Q | `TXT_LEFT_EARRING_DEVICE_TYPE` |
+| RIGHT_EARRING | AKOAGQTKAS9YB | `TXT_RIGHT_EARRING_DEVICE_TYPE` |
+| HINES | A1135D6MVNZREA | `TXT_HINES_DEVICE_TYPE` |
 
-# `TXT_TAP_DEVICE_TYPE`: "A38949IHXHRQ5P"
+### `TXT_DEVICE_NAME`: "Echo"
 
-# `TXT_BISCUIT_DEVICE_TYPE`: "A3S5BH2HU6VAYF"
+### `TXT_DOT_NAME`: "Echo Dot"
 
-# `TXT_BISCUIT_WHITE_DEVICE_TYPE`: "APF889O5V4GVL"
+### `TXT_TAP_NAME`: "Tap"
 
-# `TXT_COLEMAN_DEVICE_TYPE`: "A2UMIHMVDEPBPG"
+### `TXT_DEVICE_NAME_TITLE`: "Echo"
 
-# `TXT_KIMBALL_DEVICE_TYPE`: "A32DOYMUN6DTXA"
+### `TXT_BRAND_NAME`: "Alexa"
 
-# `TXT_MARSALIS_DEVICE_TYPE`: "A27VEYGQBW3YR5"
+### `TXT_BRAND_NAME_TITLE`: "Alexa"
 
-# `TXT_JOPLIN_DEVICE_TYPE`: "A3SSG6GR8UU7SN"
+### `TXT_BRAND_DEVICE_NAME`: "Alexa device"
 
-# `TXT_BRUBECK_DEVICE_TYPE`: "A2RU4B77X9R9NZ"
+### `TXT_BRAND_DEVICE_NAME_TITLE`: "Alexa Device"
 
-# `TXT_MINGUS_DEVICE_TYPE`: "AWZZ5CVHX2CD"
+### `TXT_BRAND_DEVICE_NAME_PLURAL`: "Alexa devices"
 
-# `TXT_KNIGHT_DEVICE_TYPE`: "A1NL4BVLQ4L3N3"
+### `TXT_APP_NAME`: "Alexa app"
 
-# `TXT_KNIGHT_TACHYON_DEVICE_TYPE`: "A2EGX4J3OKQG5G"
+### `TXT_SWITCH_ACTIVE_USER`: "Switch Active User"
 
-# `TXT_GOODMAN_DEVICE_TYPE`: "A18O6U1UQFJ0XK"
+### `TXT_LOG_IN`: "Log In"
 
-# `TXT_SONAR_DEVICE_TYPE`: "A2M35JJZWCQOMZ"
+### `TXT_ALL_SONGS`: "All Songs"
 
-# `TXT_RADAR_DEVICE_TYPE`: "A7WXQPH584YP"
+### `TXT_INVITE_INDEPENDENT`: "Send E-mail Invitation"
 
-# `TXT_ROOK_DEVICE_TYPE`: "A10A33FOX2NUBK"
+### `TXT_REGISTER_NEW_DEVICE`: "Setup New"
 
-# `TXT_STARK_DEVICE_TYPE`: "A3HF4YRA2L7XGC"
+### `TXT_REGISTER_DEVICE`: "Next"
 
-# `TXT_HANCOCK_DEVICE_TYPE`: "A1JJ0KFC4ZPNJ3"
+### `TXT_INVITATION_PLEASE_WAIT`: "Please Wait..."
 
-# `TXT_MULLIGAN_DEVICE_TYPE`: "A1RABVCI4QCIKC"
+### `TXT_INVITATION_SENT_ACKNOWLEDGE`: "OK"
 
-# `TXT_HENDERSON_DEVICE_TYPE`: "A303PJF6ISQ7IC"
+### `TXT_SEND_BETA_FEEDBACK`: "Submit Feedback"
 
-# `TXT_LEFT_EARRING_DEVICE_TYPE`: "A2IGSRU5WQUW9Q"
+### `TXT_NO_DEVICE_SELECTED`: "No device is selected. Please select a device."
 
-# `TXT_RIGHT_EARRING_DEVICE_TYPE`: "AKOAGQTKAS9YB"
+### `TXT_AUDIO_PLAYBACK_FAILED`: "Unable to play content."
 
-# `TXT_HINES_DEVICE_TYPE`: "A1135D6MVNZREA"
+### `TXT_UPGRADED_AUDIO`: "Upgraded Audio"
 
-# `TXT_DEVICE_NAME`: "Echo"
+### `TXT_CONNECT_DEVICE`: "Please make sure this device is connected to Wi-Fi."
 
-# `TXT_DOT_NAME`: "Echo Dot"
+### `TXT_UNDO_DELETE_FAILED`: "Unable to undo deletion."
 
-# `TXT_TAP_NAME`: "Tap"
+### `TXT_ACTIVE_USER`: "(Active User)"
 
-# `TXT_DEVICE_NAME_TITLE`: "Echo"
+### `TXT_NO_DEVICE_SETUP`: "No device is set up."
 
-# `TXT_BRAND_NAME`: "Alexa"
+### `TXT_NO_DEVICE_SETUP_LINK`: "<a href='###settings'>Click here</a> to set up a device."
 
-# `TXT_BRAND_NAME_TITLE`: "Alexa"
+### `MUSIC_HEADER_SIZE`: 257
 
-# `TXT_BRAND_DEVICE_NAME`: "Alexa device"
+### `MUSIC_GROW_PX`: 3E3
 
-# `TXT_BRAND_DEVICE_NAME_TITLE`: "Alexa Device"
+### `MUSIC_PRUNE_PX`: 7E3
 
-# `TXT_BRAND_DEVICE_NAME_PLURAL`: "Alexa devices"
+### `EON_PROVIDER_GINGER`: "Google"
 
-# `TXT_APP_NAME`: "Alexa app"
+### `ORIENTATION_LOCK_PORTRAIT`: "portrait"
 
-# `TXT_SWITCH_ACTIVE_USER`: "Switch Active User"
+### `ORIENTATION_LOCK_LANDSCAPE`: "landscape"
 
-# `TXT_LOG_IN`: "Log In"
+### `TXT_DISAMBIGUATE_SHOPPING`: "Did you mean to shop for something else?"
 
-# `TXT_ALL_SONGS`: "All Songs"
+### `TXT_DISAMBIGUATE_TODO`: "Did you mean to create a different to-do?"
 
-# `TXT_INVITE_INDEPENDENT`: "Send E-mail Invitation"
+### `TXT_INVALID_SHOPPING`: "Shopping items cannot be empty."
 
-# `TXT_REGISTER_NEW_DEVICE`: "Setup New"
+### `TXT_INVALID_POST`: "Message board posts cannot be empty."
 
-# `TXT_REGISTER_DEVICE`: "Next"
+### `TXT_PRIME_NOW`: "PRIME_NOW"
 
-# `TXT_INVITATION_PLEASE_WAIT`: "Please Wait..."
+### `URL_PRIME_NOW_ORDER_DETAIL_PROD`: "https://primenow.amazon.com/orderStatus?orderId={orderId}&ref={refTag}"
 
-# `TXT_INVITATION_SENT_ACKNOWLEDGE`: "OK"
+### `URL_PRIME_NOW_ORDER_DETAIL_BETA`: "https://primenow.integ.amazon.com/orderStatus?orderId={orderId}&ref={refTag}"
 
-# `TXT_SEND_BETA_FEEDBACK`: "Submit Feedback"
+### `URL_PRIME_NOW_PRODUCT_DETAIL_PROD`: "https://primenow.amazon.com/dp/{asin}?ref={refTag}"
 
-# `TXT_NO_DEVICE_SELECTED`: "No device is selected. Please select a device."
+### `URL_PRIME_NOW_PRODUCT_DETAIL_BETA`: "https://primenow.integ.amazon.com/dp/{asin}?ref={refTag}"
 
-# `TXT_AUDIO_PLAYBACK_FAILED`: "Unable to play content."
+### `URL_PRIME_NOW_MANAGE_NOTIFICATIONS_PROD`: "https://primenow.amazon.com/yourAccount/notifications"
 
-# `TXT_UPGRADED_AUDIO`: "Upgraded Audio"
+### `URL_PRIME_NOW_MANAGE_NOTIFICATIONS_BETA`: "https://primenow.integ.amazon.com/yourAccount/notifications"
 
-# `TXT_CONNECT_DEVICE`: "Please make sure this device is connected to Wi-Fi."
+### `GENERIC_ADD_TO_CART_REF_MARKER`: "alxapp_ac"
 
-# `TXT_UNDO_DELETE_FAILED`: "Unable to undo deletion."
+### `ANDROID_ADD_TO_CART_REF_MARKER`: "alxapp_ac_a"
 
-# `TXT_ACTIVE_USER`: "(Active User)"
+### `IOS_ADD_TO_CART_REF_MARKER`: "alxapp_ac_i"
 
-# `TXT_NO_DEVICE_SETUP`: "No device is set up."
+### `URL_MANAGE_YOUR_DEVICES`: "https://www.amazon.com/gp/digital/fiona/manage###manageDevices"
 
-# `TXT_NO_DEVICE_SETUP_LINK`: "<a href='#settings'>Click here</a> to set up a device."
+### `AMAZON_SHOPPING_APP_ITUNES_STORE_URL`: "https://itunes.apple.com/us/app/amazon-app-shop-browse-scan/id297606951"
 
-# `MUSIC_HEADER_SIZE`: 257
+### `AMAZON_SHOPPING_APP_NAME`: "Amazon Shopping"
 
-# `MUSIC_GROW_PX`: 3E3
+### `URL_DEFAULT_DOMAIN_NAME`: "https://www.amazon.com"
 
-# `MUSIC_PRUNE_PX`: 7E3
+### `URL_UK_DOMAIN_NAME`: "https://www.amazon.co.uk"
 
-# `EON_PROVIDER_GINGER`: "Google"
+### `URL_DE_DOMAIN_NAME`: "https://www.amazon.de"
 
-# `ORIENTATION_LOCK_PORTRAIT`: "portrait"
+### `URL_DESKTOP_MP3_SEARCH`: "/s/?url=search-alias%3Ddigital-music&field-keywords="
 
-# `ORIENTATION_LOCK_LANDSCAPE`: "landscape"
+### `URL_DESKTOP_MP3_DETAIL`: "/dp/"
 
-# `TXT_DISAMBIGUATE_SHOPPING`: "Did you mean to shop for something else?"
+### `URL_DESKTOP_PRIME_SEARCH`: "/s/ref=sr_nr_p_85_0?rh=n%3A163856011%2Ck%3A{searchString}%2Cp_85%3A8755839011&bbn=163856011&keywords={searchString}"
 
-# `TXT_DISAMBIGUATE_TODO`: "Did you mean to create a different to-do?"
+### `URL_UK_DESKTOP_PRIME_SEARCH`: "/s/ref=sr_nr_p_85_0?rh=n%3A77197031%2Ck%3A{searchString}%2Cp_85%3A5685283031&bbn=77197031&keywords={searchString}"
 
-# `TXT_INVALID_SHOPPING`: "Shopping items cannot be empty."
+### `URL_DE_DESKTOP_PRIME_SEARCH`: "/s/ref=sr_nr_p_85_0?rh=n%3A77195031%2Ck%3A{searchString}%2Cp_85%3A6798153031&bbn=77195031&keywords={searchString}"
 
-# `TXT_INVALID_POST`: "Message board posts cannot be empty."
+### `URL_GREENPOINT_MP3_SEARCH`: "/gp/dmusic/device/mp3/store/search/"
 
-# `TXT_PRIME_NOW`: "PRIME_NOW"
+### `URL_GREENPOINT_MP3_DETAIL_TRACK`: "/gp/dmusic/device/mp3/store/track/"
 
-# `URL_PRIME_NOW_ORDER_DETAIL_PROD`: "https://primenow.amazon.com/orderStatus?orderId={orderId}&ref={refTag}"
+### `URL_GREENPOINT_MP3_DETAIL_ALBUM`: "/gp/dmusic/device/mp3/store/album/"
 
-# `URL_PRIME_NOW_ORDER_DETAIL_BETA`: "https://primenow.integ.amazon.com/orderStatus?orderId={orderId}&ref={refTag}"
+### `URL_GREENPOINT_MP3_DETAIL_ARTIST`: "/gp/dmusic/device/mp3/store/artist/"
 
-# `URL_PRIME_NOW_PRODUCT_DETAIL_PROD`: "https://primenow.amazon.com/dp/{asin}?ref={refTag}"
+### `URL_BELL_GENERAL_TERM_US`: "https://www.amazon.com/gp/help/customer/display.html/?nodeId=508088&pop-up=1"
 
-# `URL_PRIME_NOW_PRODUCT_DETAIL_BETA`: "https://primenow.integ.amazon.com/dp/{asin}?ref={refTag}"
+### `URL_BELL_GENERAL_TERM_UK`: "https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=1040616&pop-up=1"
 
-# `URL_PRIME_NOW_MANAGE_NOTIFICATIONS_PROD`: "https://primenow.amazon.com/yourAccount/notifications"
+### `URL_BELL_GENERAL_TERM_DE`: "https://www.amazon.de/gp/help/customer/display.html?nodeId=505048&pop-up=1"
 
-# `URL_PRIME_NOW_MANAGE_NOTIFICATIONS_BETA`: "https://primenow.integ.amazon.com/yourAccount/notifications"
+### `URL_BELL_DEVICE_TERM`: "/gp/help/customer/display.html?nodeId=201566380&pop-up=1"
 
-# `GENERIC_ADD_TO_CART_REF_MARKER`: "alxapp_ac"
+### `URL_EARRING_DEVICE_HELP`: "https://www.amazon.com/gp/help/customer/display.html?nodeId=202209660&pop-up=1"
 
-# `ANDROID_ADD_TO_CART_REF_MARKER`: "alxapp_ac_a"
+### `AMAZON_MUSIC_SETTINGS`: "/gp/dmusic/player/settings"
 
-# `IOS_ADD_TO_CART_REF_MARKER`: "alxapp_ac_i"
+### `URL_PARAM_ROBIN_ONLY`: "+robinOnly:1"
 
-# `URL_MANAGE_YOUR_DEVICES`: "https://www.amazon.com/gp/digital/fiona/manage#manageDevices"
+### `URL_PARAM_ANDROID_BROWSER`: "android_browser_alpha"
 
-# `AMAZON_SHOPPING_APP_ITUNES_STORE_URL`: "https://itunes.apple.com/us/app/amazon-app-shop-browse-scan/id297606951"
+### `URL_PARAM_TODO_AUDIO_LINK_PREFIX`: "/api/utterance/audio/data?id="
 
-# `AMAZON_SHOPPING_APP_NAME`: "Amazon Shopping"
+### `URL_BAKER_Parent_dashboard_PROD`: "https://parents.amazon.com/settings/child-settings/"
 
-# `URL_DEFAULT_DOMAIN_NAME`: "https://www.amazon.com"
+### `URL_BAKER_Parent_dashboard_GAMMA`: "https://parents-preprod.amazon.com/settings/child-settings/"
 
-# `URL_UK_DOMAIN_NAME`: "https://www.amazon.co.uk"
+### `URL_BAKER_Parent_dashboard_BETA`: "https://parents.integ.amazon.com/settings/child-settings/"
 
-# `URL_DE_DOMAIN_NAME`: "https://www.amazon.de"
+### `URL_BAKER_CLIENTID_TAG`: "?clientId=dee_settings_v1"
 
-# `URL_DESKTOP_MP3_SEARCH`: "/s/?url=search-alias%3Ddigital-music&field-keywords="
+### `URL_BAKER_LOCALE`: "&locale=en_US"
 
-# `URL_DESKTOP_MP3_DETAIL`: "/dp/"
+### `URL_BAKER_OOBE_PROD`: "https://parents.amazon.com/deviceOobe"
 
-# `URL_DESKTOP_PRIME_SEARCH`: "/s/ref=sr_nr_p_85_0?rh=n%3A163856011%2Ck%3A{searchString}%2Cp_85%3A8755839011&bbn=163856011&keywords={searchString}"
+### `URL_BAKER_OOBE_GAMMA`: "https://parents-preprod.amazon.com/deviceOobe"
 
-# `URL_UK_DESKTOP_PRIME_SEARCH`: "/s/ref=sr_nr_p_85_0?rh=n%3A77197031%2Ck%3A{searchString}%2Cp_85%3A5685283031&bbn=77197031&keywords={searchString}"
+### `URL_BAKER_OOBE_BETA`: "https://parents.integ.amazon.com/deviceOobe"
 
-# `URL_DE_DESKTOP_PRIME_SEARCH`: "/s/ref=sr_nr_p_85_0?rh=n%3A77195031%2Ck%3A{searchString}%2Cp_85%3A6798153031&bbn=77195031&keywords={searchString}"
+### `URL_BAKER_DEVICE_SERIAL_NUMBER`: "?deviceId="
 
-# `URL_GREENPOINT_MP3_SEARCH`: "/gp/dmusic/device/mp3/store/search/"
+### `URL_BAKER_DEVICE_TYPE`: "&deviceType="
 
-# `URL_GREENPOINT_MP3_DETAIL_TRACK`: "/gp/dmusic/device/mp3/store/track/"
+### `URL_BAKER_BYOD_REFTAG`: "&ref=BYOD"
 
-# `URL_GREENPOINT_MP3_DETAIL_ALBUM`: "/gp/dmusic/device/mp3/store/album/"
+### `URL_ONE_CLICK_SETTINGS_PROD`: "https://www.amazon.com/mn/dcw/myx/settings.html?route=updatePaymentSettings&ref_=kinw_drop_coun&ie=UTF8&client=deeca"
 
-# `URL_GREENPOINT_MP3_DETAIL_ARTIST`: "/gp/dmusic/device/mp3/store/artist/"
+### `URL_ONE_CLICK_SETTINGS_DEV`: "https://development.amazon.com/mn/dcw/myx/settings.html?route=updatePaymentSettings&ref_=kinw_drop_coun&ie=UTF8&client=deeca"
 
-# `URL_BELL_GENERAL_TERM_US`: "https://www.amazon.com/gp/help/customer/display.html/?nodeId=508088&pop-up=1"
+### `URL_MANAGE_YOUR_HOUSEHOLD_PROD`: "https://www.amazon.com/gp/dop/myh/manage.html"
 
-# `URL_BELL_GENERAL_TERM_UK`: "https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=1040616&pop-up=1"
+### `URL_MANAGE_YOUR_HOUSEHOLD_BETA`: "https://development.amazon.com/gp/dop/myh/manage.html"
 
-# `URL_BELL_GENERAL_TERM_DE`: "https://www.amazon.de/gp/help/customer/display.html?nodeId=505048&pop-up=1"
+### `URL_ADD_USER_TO_HOUSEHOLD_PROD`: "https://www.amazon.com/gp/dop/myh/preinviteChecklist.html"
 
-# `URL_BELL_DEVICE_TERM`: "/gp/help/customer/display.html?nodeId=201566380&pop-up=1"
+### `URL_ADD_USER_TO_HOUSEHOLD_BETA`: "https://development.amazon.com/gp/dop/myh/preinviteChecklist.html"
 
-# `URL_EARRING_DEVICE_HELP`: "https://www.amazon.com/gp/help/customer/display.html?nodeId=202209660&pop-up=1"
+### `URL_PREFIX_MYH_DEVO`: "https://development.amazon.com/myh"
 
-# `AMAZON_MUSIC_SETTINGS`: "/gp/dmusic/player/settings"
+### `URL_PREFIX_MYH_GAMMA`: "https://pre-prod.amazon.com/myh"
 
-# `URL_PARAM_ROBIN_ONLY`: "+robinOnly:1"
+### `URL_PREFIX_MYH_PROD`: "https://www.amazon.com/myh"
 
-# `URL_PARAM_ANDROID_BROWSER`: "android_browser_alpha"
+### `URL_MYH_DEVO_US`: "https://development.amazon.com/gp/dop/myh/addMembers"
 
-# `URL_PARAM_TODO_AUDIO_LINK_PREFIX`: "/api/utterance/audio/data?id="
+### `URL_MYH_PROD_US`: "https://www.amazon.com/gp/dop/myh/addMembers"
 
-# `URL_BAKER_Parent_dashboard_PROD`: "https://parents.amazon.com/settings/child-settings/"
+### `URL_MYH_DEVO_UK`: "https://uk-development.amazon.com/myh/addMembers"
 
-# `URL_BAKER_Parent_dashboard_GAMMA`: "https://parents-preprod.amazon.com/settings/child-settings/"
+### `URL_MYH_PROD_UK`: "https://www.amazon.co.uk/myh/addMembers"
 
-# `URL_BAKER_Parent_dashboard_BETA`: "https://parents.integ.amazon.com/settings/child-settings/"
+### `URL_MYH_DEVO_DE`: "https://de-development.amazon.com//mn/dcw/myx.html/ref=kinw_myk_redirect###/home/settings/payment"
 
-# `URL_BAKER_CLIENTID_TAG`: "?clientId=dee_settings_v1"
+### `URL_MYH_PROD_DE`: "https://www.amazon.de/mn/dcw/myx.html/ref=kinw_myk_redirect###/home/settings/payment"
 
-# `URL_BAKER_LOCALE`: "&locale=en_US"
+### `URL_DEVO_LOGIN`: "https://development.amazon.com/ap/signin"
 
-# `URL_BAKER_OOBE_PROD`: "https://parents.amazon.com/deviceOobe"
+### `URL_PROD_LOGIN`: "https://www.amazon.com/ap/signin"
 
-# `URL_BAKER_OOBE_GAMMA`: "https://parents-preprod.amazon.com/deviceOobe"
+### `URL_CS_LINK`: "###help/node/201602230"
 
-# `URL_BAKER_OOBE_BETA`: "https://parents.integ.amazon.com/deviceOobe"
+### `MAX_URL_LENGTH`: 2083
 
-# `URL_BAKER_DEVICE_SERIAL_NUMBER`: "?deviceId="
+### `REGEX_URL_ONE_CLICK_SETTINGS`: 
 
-# `URL_BAKER_DEVICE_TYPE`: "&deviceType="
+### `REGEX_URL_MYH_HOUSEHOLDS`: 
 
-# `URL_BAKER_BYOD_REFTAG`: "&ref=BYOD"
+### `REGEX_URL_TERMS_AND_CONDITIONS`: 
 
-# `URL_ONE_CLICK_SETTINGS_PROD`: "https://www.amazon.com/mn/dcw/myx/settings.html?route=updatePaymentSettings&ref_=kinw_drop_coun&ie=UTF8&client=deeca"
+### `REGEX_BAKER_OOBE_START_LINK`: 
 
-# `URL_ONE_CLICK_SETTINGS_DEV`: "https://development.amazon.com/mn/dcw/myx/settings.html?route=updatePaymentSettings&ref_=kinw_drop_coun&ie=UTF8&client=deeca"
+### `REGEX_IOS_APPSTORE_LINK`: 
 
-# `URL_MANAGE_YOUR_HOUSEHOLD_PROD`: "https://www.amazon.com/gp/dop/myh/manage.html"
+### `HOSTS_GOOGLE_AUTH`: 
 
-# `URL_MANAGE_YOUR_HOUSEHOLD_BETA`: "https://development.amazon.com/gp/dop/myh/manage.html"
+### `HOSTS_PANDORA_AUTH`: 
 
-# `URL_ADD_USER_TO_HOUSEHOLD_PROD`: "https://www.amazon.com/gp/dop/myh/preinviteChecklist.html"
+### `HOSTS_IHR_AUTH`: 
 
-# `URL_ADD_USER_TO_HOUSEHOLD_BETA`: "https://development.amazon.com/gp/dop/myh/preinviteChecklist.html"
+### `HOSTS_SALMON_AUTH`: ["m.facebook.com", "www.facebook.com", "static.xx.fbcdn.net", "cs.atdmt.com"]
 
-# `URL_PREFIX_MYH_DEVO`: "https://development.amazon.com/myh"
+### `SP_CLOUD_PLAYER`: "CLOUD_PLAYER"
 
-# `URL_PREFIX_MYH_GAMMA`: "https://pre-prod.amazon.com/myh"
+### `SP_AMAZON_MUSIC`: "AMAZON_MUSIC"
 
-# `URL_PREFIX_MYH_PROD`: "https://www.amazon.com/myh"
+### `SP_IHEART`: "I_HEART_RADIO"
 
-# `URL_MYH_DEVO_US`: "https://development.amazon.com/gp/dop/myh/addMembers"
+### `SP_TUNE_IN`: "TUNE_IN"
 
-# `URL_MYH_PROD_US`: "https://www.amazon.com/gp/dop/myh/addMembers"
+### `SP_AMBER`: "AMBER"
 
-# `URL_MYH_DEVO_UK`: "https://uk-development.amazon.com/myh/addMembers"
+### `SP_GOTHAM`: "ROBIN"
 
-# `URL_MYH_PROD_UK`: "https://www.amazon.co.uk/myh/addMembers"
+### `SP_PRIMEMUSICTEST_STATION`: "ROBIN"
 
-# `URL_MYH_DEVO_DE`: "https://de-development.amazon.com//mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment"
+### `SP_AUDIBLE`: "AUDIBLE"
 
-# `URL_MYH_PROD_DE`: "https://www.amazon.de/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment"
+### `SP_PRIME`: "ROBIN"
 
-# `URL_DEVO_LOGIN`: "https://development.amazon.com/ap/signin"
+### `SP_PRIMEMUSICTEST`: "ROBIN"
 
-# `URL_PROD_LOGIN`: "https://www.amazon.com/ap/signin"
+### `SP_EBOOKS`: "EBOTTS"
 
-# `URL_CS_LINK`: "#help/node/201602230"
+### `SP_SALMON`: "SALMON"
 
-# `MAX_URL_LENGTH`: 2083
+### `SP_MUSIC_SKILL`: "MUSIC_SKILL"
 
-# `REGEX_URL_ONE_CLICK_SETTINGS`: 
+### `IMDB_MOVIE_SERVICE_URL`: "http://www.imdb.com"
 
-# `REGEX_URL_MYH_HOUSEHOLDS`: 
+### `GOOGLE_MAPS_PREFIX`: "https://maps.google.com/?q="
 
-# `REGEX_URL_TERMS_AND_CONDITIONS`: 
+### `APPLE_MAPS_PREFIX`: "https://maps.apple.com/?q="
 
-# `REGEX_BAKER_OOBE_START_LINK`: 
+### `BING_MAPS_PREFIX`: "https://maps.bing.com/?q="
 
-# `REGEX_IOS_APPSTORE_LINK`: 
+### `STANDARD_IMDB_IMAGE_FORMAT`: ".jpg"
 
-# `HOSTS_GOOGLE_AUTH`: 
+### `SMALL_IMDB_IMAGE_DIMENSION`: 
 
-# `HOSTS_PANDORA_AUTH`: 
+## DEVICE_TYPE_GROUP
 
-# `HOSTS_IHR_AUTH`: 
+| name | value |
+| ---- | ----- |
+| `DOPPLER_DEVICE_TYPE_GROUP` | "device" |
+| `ALEXA_DEVICE_TYPE_GROUP` | "app" |
 
-# `HOSTS_SALMON_AUTH`: ["m.facebook.com", "www.facebook.com", "static.xx.fbcdn.net", "cs.atdmt.com"]
+### `ARIA_INTERACTABLE_ELEMENTS`: "A INPUT BUTTON TEXTAREA SELECT VIDEO PASSWORD".split(" ")
 
-# `SP_CLOUD_PLAYER`: "CLOUD_PLAYER"
+### `URL_PRIME_MUSIC_SIGNUP`: "/gp/dmusic/promotions/prime.html/ref=dmm_prm_echo"
 
-# `SP_AMAZON_MUSIC`: "AMAZON_MUSIC"
+### `NOW_PLAYING_SCREEN_DEFAULT_SUGGESTIONS`: "play music;play Jazz music from Prime;play music by Bruno Mars;play Top 40 Fillings on iHeartRadio;play Today's Hits Radio from Pandora;read my Audible book;play All Things Considered from TuneIn".split(";")
 
-# `SP_IHEART`: "I_HEART_RADIO"
+### `MILLIS_PER_SECOND`: 1E3
 
-# `SP_TUNE_IN`: "TUNE_IN"
+### `CELEBRITY_FOLDER_KEY`: "FOLDER_CELEBRITY"
 
-# `SP_AMBER`: "AMBER"
+### `US_LOCALE`: "en-US"
 
-# `SP_GOTHAM`: "ROBIN"
+### `TXT_ORG_NAME_TITLE`: "Amazon"
 
-# `SP_PRIMEMUSICTEST_STATION`: "ROBIN"
+### `PHILIPS_LOCAL_MANUFACTURER_NAME`: "royal philips electronics"
 
-# `SP_AUDIBLE`: "AUDIBLE"
+### `PHILIPS_CLOUD_MANUFACTURER_NAME`: "philips lighting"
 
-# `SP_PRIME`: "ROBIN"
+### `WEMO_CLOUD_MANUFACTURER_NAME`: "wemo"
 
-# `SP_PRIMEMUSICTEST`: "ROBIN"
+### `WEMO_LOCAL_MANUFACTURER_NAME`: "belkin international inc."
 
-# `SP_EBOOKS`: "EBOTTS"
+### `CLOUD_DISCOVERED_DEVICE`: "CLOUD_DISCOVERED_DEVICE"
 
-# `SP_SALMON`: "SALMON"
+### `PHILIPS_CLOUD_DELIMITER`: "lights"
 
-# `SP_MUSIC_SKILL`: "MUSIC_SKILL"
+### `PHILIPS_LOCAL_DELIMITER`: 
 
-# `IMDB_MOVIE_SERVICE_URL`: "http://www.imdb.com"
+### `WEMO_CLOUD_DELIMITER`: ":"
 
-# `GOOGLE_MAPS_PREFIX`: "https://maps.google.com/?q="
+### `WEMO_LOCAL_DELIMITER`: "-"
 
-# `APPLE_MAPS_PREFIX`: "https://maps.apple.com/?q="
+### `ALPHADA_SETTING_ALL`: "All"
 
-# `BING_MAPS_PREFIX`: "https://maps.bing.com/?q="
+### `ALPHADA_SETTING_HOME`: "Home"
 
-# `STANDARD_IMDB_IMAGE_FORMAT`: ".jpg"
+### `ALPHADA_SETTING_OFF`: "Off"
 
-# `SMALL_IMDB_IMAGE_DIMENSION`: 
+### `ITEM_CREATED`: "itemCreated"
 
-# `DOPPLER_DEVICE_TYPE_GROUP`: "device"
+### `ITEM_UPDATED`: "itemUpdated"
 
-# `ALEXA_DEVICE_TYPE_GROUP`: "app"
+### `ITEM_DELETED`: "itemDeleted"
 
-# `ARIA_INTERACTABLE_ELEMENTS`: "A INPUT BUTTON TEXTAREA SELECT VIDEO PASSWORD".split(" ")
+### `LIST_CLEARED`: "listCleared"
 
-# `URL_PRIME_MUSIC_SIGNUP`: "/gp/dmusic/promotions/prime.html/ref=dmm_prm_echo"
+### `VAL_DISCOVERY_PROGRESS_REFRESH_INTERVAL`: 100
 
-# `NOW_PLAYING_SCREEN_DEFAULT_SUGGESTIONS`: "play music;play Jazz music from Prime;play music by Bruno Mars;play Top 40 Fillings on iHeartRadio;play Today's Hits Radio from Pandora;read my Audible book;play All Things Considered from TuneIn".split(";")
+### `VAL_DISCOVERY_EXPECTED_DURATION`: 15E3
 
-# `MILLIS_PER_SECOND`: 1E3
+### `REQUEST_IN_PROGRESS`: "Request is already in progress"
 
-# `CELEBRITY_FOLDER_KEY`: "FOLDER_CELEBRITY"
+### `OOBE_SKIPPED`: "OOBE was already skipped"
 
-# `US_LOCALE`: "en-US"
+### `OOBE_EXECUTED`: "OOBE was already executed."
 
-# `TXT_ORG_NAME_TITLE`: "Amazon"
+### `NO_ACCESS_TO_COMMS`: "No Access."
 
-# `PHILIPS_LOCAL_MANUFACTURER_NAME`: "royal philips electronics"
+### `OOBE_SHOWN`: "OOBE has already been shown."
 
-# `PHILIPS_CLOUD_MANUFACTURER_NAME`: "philips lighting"
+### `WEBLAB_DISABLED_ROUTE`: "disabled"
 
-# `WEMO_CLOUD_MANUFACTURER_NAME`: "wemo"
+### `CANTILEVER_WEBLAB`: "cantileverWeblab"
 
-# `WEMO_LOCAL_MANUFACTURER_NAME`: "belkin international inc."
+### `ACTIVITY_START_TIME`: "activityStartTime"
 
-# `CLOUD_DISCOVERED_DEVICE`: "CLOUD_DISCOVERED_DEVICE"
-
-# `PHILIPS_CLOUD_DELIMITER`: "lights"
-
-# `PHILIPS_LOCAL_DELIMITER`: 
-
-# `WEMO_CLOUD_DELIMITER`: ":"
-
-# `WEMO_LOCAL_DELIMITER`: "-"
-
-# `ALPHADA_SETTING_ALL`: "All"
-
-# `ALPHADA_SETTING_HOME`: "Home"
-
-# `ALPHADA_SETTING_OFF`: "Off"
-
-# `ITEM_CREATED`: "itemCreated"
-
-# `ITEM_UPDATED`: "itemUpdated"
-
-# `ITEM_DELETED`: "itemDeleted"
-
-# `LIST_CLEARED`: "listCleared"
-
-# `VAL_DISCOVERY_PROGRESS_REFRESH_INTERVAL`: 100
-
-# `VAL_DISCOVERY_EXPECTED_DURATION`: 15E3
-
-# `REQUEST_IN_PROGRESS`: "Request is already in progress"
-
-# `OOBE_SKIPPED`: "OOBE was already skipped"
-
-# `OOBE_EXECUTED`: "OOBE was already executed."
-
-# `NO_ACCESS_TO_COMMS`: "No Access."
-
-# `OOBE_SHOWN`: "OOBE has already been shown."
-
-# `WEBLAB_DISABLED_ROUTE`: "disabled"
-
-# `CANTILEVER_WEBLAB`: "cantileverWeblab"
-
-# `ACTIVITY_START_TIME`: "activityStartTime"
-
-# `ACTIVITY_END_TIME`: "activityEndTime"
+### `ACTIVITY_END_TIME`: "activityEndTime"
