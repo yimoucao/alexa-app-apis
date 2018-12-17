@@ -132,6 +132,40 @@ Response:
 | ALEXA_DEVICE_TYPE_GROUP | `"app"` |
 | serial-number | device's serial number |
 
+# Lists
+
+## `/api/namedLists`
+
+GET Response:
+
+```json
+{
+    "lists": [
+        {
+            "archived": false,
+            "createdDate": 1545014183847,
+            "customerId": "THECUSTOMERID",
+            "defaultList": true,
+            "itemId": "base64encodedId",
+            "listIds": [
+                "base64encodedId"
+            ],
+            "listReorderVersion": 0,
+            "name": null,
+            "nbestItems": null,
+            "originalAudioId": null,
+            "type": "TO_DO",
+            "updatedDate": 1545014183847,
+            "version": 1
+        },
+        ...
+    ]
+}
+```
+
+## `/api/namedLists/<base64 encoded id>/items`
+
+GET Params: startTime, endTime, completed, listIds
 
 # Alexa Preference
 
@@ -455,6 +489,86 @@ GET response:
 
 POST:
 
+## `/api/customer-status`
+
+Response:
+
+```json
+{
+    "countryOfResidenceSet":true,
+    "eulaAcceptance":true,
+    "ftueSkipped":false,
+    "hasActiveDopplers":true,
+    "hasPhysical1PDevice":true,
+    "preferredMarketplaceSet":true,
+    "tutorialComplete":false
+}
+```
+
+## `/api/feature-alert`
+
+GET Response:
+```json
+{"lastDismissed":null}
+```
+
+## `/api/feature-alert-location`
+
+GET Response:
+```json
+{"url":"https://pitangui.amazon.com/api/feature-alert-content"}
+```
+
+# Household
+
+## `/api/household`
+
+GET Response:
+
+```json
+{
+    "accounts": [
+        {
+            "email": "abc@abc.com",
+            "eulaAcceptance": true,
+            "firstName": "John Doe",
+            "fullName": "John Doe",
+            "id": "THE14LETTERSID",
+            "pendingUserPin": null,
+            "role": "ADULT"
+        }
+    ],
+    "id": null
+}
+```
+
+## `/api/household/CSRFToken?householdOperationName=` + a + `;sessionId=`
+
+## `/api/kedevice`
+
+Check if the device is a Kids Edition device
+
+GET Params: deviceType, deviceSerialNumber
+
+GET Response:
+```json
+{"isKEDevice":false}
+```
+
+## `/api/amazon-music-benefits`
+
+GET Params: customerId, deviceSerialNumber, deviceType
+
+GET Response:
+```json
+{
+    "primeMusicBrowseable": true,
+    "primeMusicContentAccessible": true,
+    "primeMusicTestBrowseAndAddable": false,
+    "primeMusicTestPlaybackAccessible": false
+}
+```
+
 # TODO
 
 ## `/api/authentication`
@@ -505,19 +619,6 @@ Response:
 
 ## `/api/calendar/account`
 
-## `/api/customer-status`
-
-Response:
-
-    {
-        "countryOfResidenceSet":true,
-        "eulaAcceptance":true,
-        "ftueSkipped":false,
-        "hasActiveDopplers":true,
-        "hasPhysical1PDevice":true,
-        "preferredMarketplaceSet":true,
-        "tutorialComplete":false
-    }
 
 ## `/api/eon/householdaccounts`
 
@@ -596,8 +697,6 @@ Response:
         ...
     ]
     }
-
-## `/api/household/CSRFToken?householdOperationName=` + a + `;sessionId=`
 
 ## `/api/iheartradio/preferences`
 
