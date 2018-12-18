@@ -220,6 +220,61 @@ Response:
         }
     }
 
+# Reminders
+
+# Alarms
+
+## `/api/notifications`
+
+GET Response:
+
+```json
+{
+  "notifications": [
+    {
+      "alarmTime": 1500026400000,
+      "createdDate": 1499993115423,
+      "deferredAtTime": null,
+      "deviceSerialNumber": "DEVICESERIALNUMBER",
+      "deviceType": "DEVICETYPE",
+      "geoLocationTriggerData": null,
+      "id": "IDididxxx",
+      "musicAlarmId": null,
+      "musicEntity": null,
+      "notificationIndex": "notification-index-here",
+      "originalDate": "2017-07-14",
+      "originalTime": "06:00:00.000",
+      "personProfile": null,
+      "provider": null,
+      "rRuleData": null,
+      "recurringPattern": null,
+      "remainingTime": 0,
+      "reminderLabel": null,
+      "skillInfo": null,
+      "snoozedToTime": null,
+      "sound": {
+        "displayName": "Simple Alarm",
+        "folder": null,
+        "id": "system_alerts_melodic_01",
+        "providerId": "ECHO",
+        "sampleUrl": "https://s3.amazonaws.com/deeappservice.prod.notificationtones/system_alerts_melodic_01.mp3"
+      },
+      "status": "OFF",
+      "targetPersonProfiles": null,
+      "timeZoneId": null,
+      "timerLabel": null,
+      "triggerTime": 0,
+      "type": "Alarm",
+      "version": "4"
+    }
+  ]
+}
+```
+
+# Timers
+
+
+
 ## Communications
 
 ## `/api/communications/providers`
@@ -471,9 +526,17 @@ Response:
 
 # General
 
+## `/api/featureaccess-v3`
+
+Methods: POST
+
+POST Params:
+
+
+
 ## Voice Responses
 
-## `api/voice-responses`
+## `/api/voice-responses`
 
 Methods: GET, POST
 
