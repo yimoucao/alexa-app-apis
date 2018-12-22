@@ -1,3 +1,92 @@
+# General
+
+## `POST` `/api/featureaccess-v3`
+
+Search accessibility to various features(?), results are sorted alphabetically.
+
+POST Params:
+
+```json
+{
+  "features": [
+    "CALENDAR_FEATURE_POTATO_V3",
+    "CALENDAR_DOMAIN_INTERNAL",
+    "CALENDAR_DOMAIN_EXTERNAL",
+    "CALENDAR_FEATURE_CREATE_EVENT",
+    "PERSONAL_PHOTOS_ALEXA_APP_SETTINGS",
+    "PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_AMAZON",
+    "PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_FACEBOOK",
+    "EON_FEATURE_DREAM",
+    ...
+  ]
+}
+```
+
+POST Response:
+
+```json
+{
+    "inAnyPool": false,
+    "states": [
+    "CALENDAR_FEATURE_POTATO_V3": true,
+    "CALENDAR_DOMAIN_INTERNAL": true,
+    "CALENDAR_DOMAIN_EXTERNAL": true,
+    "CALENDAR_FEATURE_CREATE_EVENT": true,
+    "PERSONAL_PHOTOS_ALEXA_APP_SETTINGS": false,
+    "PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_AMAZON": false,
+    "PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_FACEBOOK": false,
+    "EON_FEATURE_DREAM": true,
+    ...
+    ]
+}
+```
+
+## `GET|POST``/api/voice-responses`
+
+Methods: GET, POST
+
+GET:
+
+If brief mode is on, `TERSE` will be listed in `promptModes`
+
+GET response:
+
+    {
+        "promptModes": []
+    }
+
+POST:
+
+## `GET` `/api/customer-status`
+
+Response:
+
+```json
+{
+    "countryOfResidenceSet":true,
+    "eulaAcceptance":true,
+    "ftueSkipped":false,
+    "hasActiveDopplers":true,
+    "hasPhysical1PDevice":true,
+    "preferredMarketplaceSet":true,
+    "tutorialComplete":false
+}
+```
+
+## `GET` `/api/feature-alert`
+
+GET Response:
+```json
+{"lastDismissed":null}
+```
+
+## `GET` `/api/feature-alert-location`
+
+GET Response:
+```json
+{"url":"https://pitangui.amazon.com/api/feature-alert-content"}
+```
+
 # Devices
 
 ## `/api/devices/`
@@ -134,7 +223,42 @@ Response:
 
 # Lists
 
-## `/api/namedLists`
+## `GET` `/api/lists/linkedPartners`
+
+List linked list partners.
+
+## `GET` `/api/lists/listPartners`
+
+List TODO list partners. Such as: Any.do, AnyList, Cozi Lists, Picniic, Todoist.
+
+Response:
+
+```json
+{
+"listPartners": [
+    {
+    "amazonStoreURL": null,
+    "appId": "amzn1.ask.skill.5858c12a-c55c-4a1b-b59c-f7f6bfdf22ed",
+    "appStoreURL": null,
+    "linkingFlowAmazonDeepLinkURL": null,
+    "linkingFlowAndroidDeepLinkURL": null,
+    "linkingFlowIOSDeepLinkURL": null,
+    "linkingFlowWebURL": "skills/dp/B074X3JRHL/?ref=skill_dsk_skb_sr_0",
+    "logoImageURL": "https://images-na.ssl-images-amazon.com/images/I/41y53Nnp+wL.png",
+    "name": "Any.do",
+    "playStoreURL": null,
+    "webURL": null
+    },
+    ...
+]
+}
+```
+
+## `GET|POST` `/api/namedLists`
+
+GET: get named lists
+
+POST: creat a new list
 
 GET Response:
 
@@ -163,11 +287,49 @@ GET Response:
 }
 ```
 
-## `/api/namedLists/<based64 encoded id>`
+POST params:
 
-Method: GET
+```json
+{
+  "name": "testlist",
+  "itemId": null,
+  "updatedDate": null,
+  "createdDate": 1545514940098,
+  "utteranceId": null,
+  "type": null,
+  "listIds": null,
+  "version": null,
+  "archived": false,
+  "customerId": null,
+  "defaultList": false
+}
+```
 
-GET Response:
+POST response:
+
+```json
+{
+    "archived": false,
+    "createdDate": 1545514941412,
+    "customerId": null,
+    "defaultList": false,
+    "itemId": "base64encodedId",
+    "listIds": [
+        "base64encodedId"
+    ],
+    "listReorderVersion": 0,
+    "name": "the new list",
+    "nbestItems": null,
+    "originalAudioId": null,
+    "type": null,
+    "updatedDate": 1545514941412,
+    "version": 1
+}
+```
+
+## `GET` `/api/namedLists/<based64 encoded id>`
+
+Response:
 
 ```json
 {
@@ -190,17 +352,15 @@ GET Response:
 ```
 
 
-## `/api/namedLists/<base64 encoded id>/items`
-
-Methods: GET
+## `GET` `/api/namedLists/<base64 encoded id>/items`
 
 Get items of one list with criteria specified in GET params.
 
 GET Params: startTime, endTime, completed, listIds
 
-## `/api/namedLists/<base64 encoded id>/item`
+## `POST` `/api/namedLists/<base64 encoded id>/item`
 
-Methods: POST, add new item
+Add new item to a list
 
 POST Parms: 
 
@@ -229,11 +389,11 @@ POST Response:
 }
 ```
 
-## `/api/namedLists/<base64 encoded id>/item/<item id>`
+## `PUT|DELETE` `/api/namedLists/<base64 encoded id>/item/<item id>`
 
-Method: PUT, modify content
+PUT: modify content
 
-Method: DELETE, delete item
+DELETE: delete item
 
 # Alexa Preference
 
@@ -250,47 +410,46 @@ Response:
 ## `/api/provider-preferences`
 
 Response:
-
-    {
-        "preferencesMap": {
-            "MUSIC": [
-                {
-                    "associated": true,
-                    "preferred": false,
-                    "providerId": "AMAZON_MUSIC",
-                    "providerName": "Amazon Music",
-                    "skillId": null
-                },
-                {
-                    "associated": true,
-                    "preferred": true,
-                    "providerId": "SPOTIFY",
-                    "providerName": "Spotify",
-                    "skillId": null
-                }
-            ],
-            "STATION": [
-                {
-                    "associated": true,
-                    "preferred": true,
-                    "providerId": "AMAZON_MUSIC",
-                    "providerName": "Amazon Music",
-                    "skillId": null
-                },
-                {
-                    "associated": true,
-                    "preferred": false,
-                    "providerId": "I_HEART_RADIO",
-                    "providerName": "iHeartRadio",
-                    "skillId": null
-                }
-            ]
-        }
+```json
+{
+    "preferencesMap": {
+        "MUSIC": [
+            {
+                "associated": true,
+                "preferred": false,
+                "providerId": "AMAZON_MUSIC",
+                "providerName": "Amazon Music",
+                "skillId": null
+            },
+            {
+                "associated": true,
+                "preferred": true,
+                "providerId": "SPOTIFY",
+                "providerName": "Spotify",
+                "skillId": null
+            }
+        ],
+        "STATION": [
+            {
+                "associated": true,
+                "preferred": true,
+                "providerId": "AMAZON_MUSIC",
+                "providerName": "Amazon Music",
+                "skillId": null
+            },
+            {
+                "associated": true,
+                "preferred": false,
+                "providerId": "I_HEART_RADIO",
+                "providerName": "iHeartRadio",
+                "skillId": null
+            }
+        ]
     }
+}
+```
 
-# Reminders
-
-# Alarms
+# Reminders & Alarms
 
 ## `/api/notifications`
 
@@ -339,7 +498,33 @@ GET Response:
 }
 ```
 
-# Timers
+## `PUT` `/api/notifications/createReminder`
+
+Create reminder
+
+Params:
+
+```json
+{
+  "type": "Reminder",
+  "status": "ON",
+  "alarmTime": 1545520380000,
+  "originalTime": "15: 13: 00.000",
+  "originalDate": "2018-12-22",
+  "timeZoneId": null,
+  "reminderIndex": null,
+  "skillInfo": null,
+  "sound": null,
+  "deviceSerialNumber": "deviceSerialNumber",
+  "deviceType": "deviceType",
+  "recurringPattern": null,
+  "reminderLabel": "test",
+  "isSaveInFlight": true,
+  "id": "createReminder",
+  "isRecurring": false,
+  "createdDate": 1545516813030
+}
+```
 
 
 
@@ -561,94 +746,7 @@ GET response:
         ]
     }
 
-## Lists
 
-## `/api/lists/linkedPartners`
-
-List linked list partners.
-
-## `/api/lists/listPartners`
-
-List TODO list partners. Such as: Any.do, AnyList, Cozi Lists, Picniic, Todoist.
-
-Response:
-
-    {
-    "listPartners": [
-        {
-        "amazonStoreURL": null,
-        "appId": "amzn1.ask.skill.5858c12a-c55c-4a1b-b59c-f7f6bfdf22ed",
-        "appStoreURL": null,
-        "linkingFlowAmazonDeepLinkURL": null,
-        "linkingFlowAndroidDeepLinkURL": null,
-        "linkingFlowIOSDeepLinkURL": null,
-        "linkingFlowWebURL": "skills/dp/B074X3JRHL/?ref=skill_dsk_skb_sr_0",
-        "logoImageURL": "https://images-na.ssl-images-amazon.com/images/I/41y53Nnp+wL.png",
-        "name": "Any.do",
-        "playStoreURL": null,
-        "webURL": null
-        },
-        ...
-    ]
-    }
-
-# General
-
-## `/api/featureaccess-v3`
-
-Methods: POST
-
-POST Params:
-
-
-
-## Voice Responses
-
-## `/api/voice-responses`
-
-Methods: GET, POST
-
-GET:
-
-If brief mode is on, `TERSE` will be listed in `promptModes`
-
-GET response:
-
-    {
-        "promptModes": []
-    }
-
-POST:
-
-## `/api/customer-status`
-
-Response:
-
-```json
-{
-    "countryOfResidenceSet":true,
-    "eulaAcceptance":true,
-    "ftueSkipped":false,
-    "hasActiveDopplers":true,
-    "hasPhysical1PDevice":true,
-    "preferredMarketplaceSet":true,
-    "tutorialComplete":false
-}
-```
-
-## `/api/feature-alert`
-
-GET Response:
-```json
-{"lastDismissed":null}
-```
-
-## `/api/feature-alert-location`
-
-GET Response:
-```json
-{"url":"https://pitangui.amazon.com/api/feature-alert-content"}
-```
 
 # Household
 
