@@ -58,6 +58,23 @@
     <a class="current" href="./">APIs</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#general">General</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#post-apifeatureaccess-v3">POST /api/featureaccess-v3</a></li>
+        
+            <li><a class="toctree-l3" href="#getpostapivoice-responses">GET|POST``/api/voice-responses</a></li>
+        
+            <li><a class="toctree-l3" href="#get-apicustomer-status">GET /api/customer-status</a></li>
+        
+            <li><a class="toctree-l3" href="#get-apifeature-alert">GET /api/feature-alert</a></li>
+        
+            <li><a class="toctree-l3" href="#get-apifeature-alert-location">GET /api/feature-alert-location</a></li>
+        
+        </ul>
+    
+
     <li class="toctree-l2"><a href="#devices">Devices</a></li>
     
         <ul>
@@ -75,15 +92,19 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#apinamedlists">/api/namedLists</a></li>
+            <li><a class="toctree-l3" href="#get-apilistslinkedpartners">GET /api/lists/linkedPartners</a></li>
         
-            <li><a class="toctree-l3" href="#apinamedlistsltbased64-encoded-idgt">/api/namedLists/&lt;based64 encoded id&gt;</a></li>
+            <li><a class="toctree-l3" href="#get-apilistslistpartners">GET /api/lists/listPartners</a></li>
         
-            <li><a class="toctree-l3" href="#apinamedlistsltbase64-encoded-idgtitems">/api/namedLists/&lt;base64 encoded id&gt;/items</a></li>
+            <li><a class="toctree-l3" href="#getpost-apinamedlists">GET|POST /api/namedLists</a></li>
         
-            <li><a class="toctree-l3" href="#apinamedlistsltbase64-encoded-idgtitem">/api/namedLists/&lt;base64 encoded id&gt;/item</a></li>
+            <li><a class="toctree-l3" href="#get-apinamedlistsltbased64-encoded-idgt">GET /api/namedLists/&lt;based64 encoded id&gt;</a></li>
         
-            <li><a class="toctree-l3" href="#apinamedlistsltbase64-encoded-idgtitemltitem-idgt">/api/namedLists/&lt;base64 encoded id&gt;/item/&lt;item id&gt;</a></li>
+            <li><a class="toctree-l3" href="#get-apinamedlistsltbase64-encoded-idgtitems">GET /api/namedLists/&lt;base64 encoded id&gt;/items</a></li>
+        
+            <li><a class="toctree-l3" href="#post-apinamedlistsltbase64-encoded-idgtitem">POST /api/namedLists/&lt;base64 encoded id&gt;/item</a></li>
+        
+            <li><a class="toctree-l3" href="#putdelete-apinamedlistsltbase64-encoded-idgtitemltitem-idgt">PUT|DELETE /api/namedLists/&lt;base64 encoded id&gt;/item/&lt;item id&gt;</a></li>
         
         </ul>
     
@@ -99,21 +120,13 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#reminders">Reminders</a></li>
-    
-
-    <li class="toctree-l2"><a href="#alarms">Alarms</a></li>
+    <li class="toctree-l2"><a href="#reminders-alarms">Reminders &amp; Alarms</a></li>
     
         <ul>
         
             <li><a class="toctree-l3" href="#apinotifications">/api/notifications</a></li>
         
-        </ul>
-    
-
-    <li class="toctree-l2"><a href="#timers">Timers</a></li>
-    
-        <ul>
+            <li><a class="toctree-l3" href="#put-apinotificationscreatereminder">PUT /api/notifications/createReminder</a></li>
         
             <li><a class="toctree-l3" href="#communications">Communications</a></li>
         
@@ -136,31 +149,6 @@
             <li><a class="toctree-l3" href="#apitrafficsettings">/api/traffic/settings</a></li>
         
             <li><a class="toctree-l3" href="#apitrafficsuggest">/api/traffic/suggest</a></li>
-        
-            <li><a class="toctree-l3" href="#lists_1">Lists</a></li>
-        
-            <li><a class="toctree-l3" href="#apilistslinkedpartners">/api/lists/linkedPartners</a></li>
-        
-            <li><a class="toctree-l3" href="#apilistslistpartners">/api/lists/listPartners</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l2"><a href="#general">General</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#apifeatureaccess-v3">/api/featureaccess-v3</a></li>
-        
-            <li><a class="toctree-l3" href="#voice-responses">Voice Responses</a></li>
-        
-            <li><a class="toctree-l3" href="#apivoice-responses">/api/voice-responses</a></li>
-        
-            <li><a class="toctree-l3" href="#apicustomer-status">/api/customer-status</a></li>
-        
-            <li><a class="toctree-l3" href="#apifeature-alert">/api/feature-alert</a></li>
-        
-            <li><a class="toctree-l3" href="#apifeature-alert-location">/api/feature-alert-location</a></li>
         
         </ul>
     
@@ -311,7 +299,76 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="devices">Devices</h1>
+                <h1 id="general">General</h1>
+<h2 id="post-apifeatureaccess-v3"><code>POST</code> <code>/api/featureaccess-v3</code></h2>
+<p>Search accessibility to various features(?), results are sorted alphabetically.</p>
+<p>POST Params:</p>
+<pre><code class="json">{
+  &quot;features&quot;: [
+    &quot;CALENDAR_FEATURE_POTATO_V3&quot;,
+    &quot;CALENDAR_DOMAIN_INTERNAL&quot;,
+    &quot;CALENDAR_DOMAIN_EXTERNAL&quot;,
+    &quot;CALENDAR_FEATURE_CREATE_EVENT&quot;,
+    &quot;PERSONAL_PHOTOS_ALEXA_APP_SETTINGS&quot;,
+    &quot;PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_AMAZON&quot;,
+    &quot;PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_FACEBOOK&quot;,
+    &quot;EON_FEATURE_DREAM&quot;,
+    ...
+  ]
+}
+</code></pre>
+
+<p>POST Response:</p>
+<pre><code class="json">{
+    &quot;inAnyPool&quot;: false,
+    &quot;states&quot;: [
+    &quot;CALENDAR_FEATURE_POTATO_V3&quot;: true,
+    &quot;CALENDAR_DOMAIN_INTERNAL&quot;: true,
+    &quot;CALENDAR_DOMAIN_EXTERNAL&quot;: true,
+    &quot;CALENDAR_FEATURE_CREATE_EVENT&quot;: true,
+    &quot;PERSONAL_PHOTOS_ALEXA_APP_SETTINGS&quot;: false,
+    &quot;PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_AMAZON&quot;: false,
+    &quot;PERSONAL_PHOTOS_ALEXA_APP_SETTINGS_FACEBOOK&quot;: false,
+    &quot;EON_FEATURE_DREAM&quot;: true,
+    ...
+    ]
+}
+</code></pre>
+
+<h2 id="getpostapivoice-responses"><code>GET|POST``/api/voice-responses</code></h2>
+<p>Methods: GET, POST</p>
+<p>GET:</p>
+<p>If brief mode is on, <code>TERSE</code> will be listed in <code>promptModes</code></p>
+<p>GET response:</p>
+<pre><code>{
+    "promptModes": []
+}
+</code></pre>
+<p>POST:</p>
+<h2 id="get-apicustomer-status"><code>GET</code> <code>/api/customer-status</code></h2>
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;countryOfResidenceSet&quot;:true,
+    &quot;eulaAcceptance&quot;:true,
+    &quot;ftueSkipped&quot;:false,
+    &quot;hasActiveDopplers&quot;:true,
+    &quot;hasPhysical1PDevice&quot;:true,
+    &quot;preferredMarketplaceSet&quot;:true,
+    &quot;tutorialComplete&quot;:false
+}
+</code></pre>
+
+<h2 id="get-apifeature-alert"><code>GET</code> <code>/api/feature-alert</code></h2>
+<p>GET Response:</p>
+<pre><code class="json">{&quot;lastDismissed&quot;:null}
+</code></pre>
+
+<h2 id="get-apifeature-alert-location"><code>GET</code> <code>/api/feature-alert-location</code></h2>
+<p>GET Response:</p>
+<pre><code class="json">{&quot;url&quot;:&quot;https://pitangui.amazon.com/api/feature-alert-content&quot;}
+</code></pre>
+
+<h1 id="devices">Devices</h1>
 <h2 id="apidevices"><code>/api/devices/</code></h2>
 <h2 id="apidevices-v2device"><code>/api/devices-v2/device</code></h2>
 <p>GET parameters:</p>
@@ -464,7 +521,34 @@
 </tbody>
 </table>
 <h1 id="lists">Lists</h1>
-<h2 id="apinamedlists"><code>/api/namedLists</code></h2>
+<h2 id="get-apilistslinkedpartners"><code>GET</code> <code>/api/lists/linkedPartners</code></h2>
+<p>List linked list partners.</p>
+<h2 id="get-apilistslistpartners"><code>GET</code> <code>/api/lists/listPartners</code></h2>
+<p>List TODO list partners. Such as: Any.do, AnyList, Cozi Lists, Picniic, Todoist.</p>
+<p>Response:</p>
+<pre><code class="json">{
+&quot;listPartners&quot;: [
+    {
+    &quot;amazonStoreURL&quot;: null,
+    &quot;appId&quot;: &quot;amzn1.ask.skill.5858c12a-c55c-4a1b-b59c-f7f6bfdf22ed&quot;,
+    &quot;appStoreURL&quot;: null,
+    &quot;linkingFlowAmazonDeepLinkURL&quot;: null,
+    &quot;linkingFlowAndroidDeepLinkURL&quot;: null,
+    &quot;linkingFlowIOSDeepLinkURL&quot;: null,
+    &quot;linkingFlowWebURL&quot;: &quot;skills/dp/B074X3JRHL/?ref=skill_dsk_skb_sr_0&quot;,
+    &quot;logoImageURL&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41y53Nnp+wL.png&quot;,
+    &quot;name&quot;: &quot;Any.do&quot;,
+    &quot;playStoreURL&quot;: null,
+    &quot;webURL&quot;: null
+    },
+    ...
+]
+}
+</code></pre>
+
+<h2 id="getpost-apinamedlists"><code>GET|POST</code> <code>/api/namedLists</code></h2>
+<p>GET: get named lists</p>
+<p>POST: creat a new list</p>
 <p>GET Response:</p>
 <pre><code class="json">{
     &quot;lists&quot;: [
@@ -490,9 +574,44 @@
 }
 </code></pre>
 
-<h2 id="apinamedlistsltbased64-encoded-idgt"><code>/api/namedLists/&lt;based64 encoded id&gt;</code></h2>
-<p>Method: GET</p>
-<p>GET Response:</p>
+<p>POST params:</p>
+<pre><code class="json">{
+  &quot;name&quot;: &quot;testlist&quot;,
+  &quot;itemId&quot;: null,
+  &quot;updatedDate&quot;: null,
+  &quot;createdDate&quot;: 1545514940098,
+  &quot;utteranceId&quot;: null,
+  &quot;type&quot;: null,
+  &quot;listIds&quot;: null,
+  &quot;version&quot;: null,
+  &quot;archived&quot;: false,
+  &quot;customerId&quot;: null,
+  &quot;defaultList&quot;: false
+}
+</code></pre>
+
+<p>POST response:</p>
+<pre><code class="json">{
+    &quot;archived&quot;: false,
+    &quot;createdDate&quot;: 1545514941412,
+    &quot;customerId&quot;: null,
+    &quot;defaultList&quot;: false,
+    &quot;itemId&quot;: &quot;base64encodedId&quot;,
+    &quot;listIds&quot;: [
+        &quot;base64encodedId&quot;
+    ],
+    &quot;listReorderVersion&quot;: 0,
+    &quot;name&quot;: &quot;the new list&quot;,
+    &quot;nbestItems&quot;: null,
+    &quot;originalAudioId&quot;: null,
+    &quot;type&quot;: null,
+    &quot;updatedDate&quot;: 1545514941412,
+    &quot;version&quot;: 1
+}
+</code></pre>
+
+<h2 id="get-apinamedlistsltbased64-encoded-idgt"><code>GET</code> <code>/api/namedLists/&lt;based64 encoded id&gt;</code></h2>
+<p>Response:</p>
 <pre><code class="json">{
     &quot;archived&quot;: false,
     &quot;createdDate&quot;: 1545014183847,
@@ -512,12 +631,11 @@
 }
 </code></pre>
 
-<h2 id="apinamedlistsltbase64-encoded-idgtitems"><code>/api/namedLists/&lt;base64 encoded id&gt;/items</code></h2>
-<p>Methods: GET</p>
+<h2 id="get-apinamedlistsltbase64-encoded-idgtitems"><code>GET</code> <code>/api/namedLists/&lt;base64 encoded id&gt;/items</code></h2>
 <p>Get items of one list with criteria specified in GET params.</p>
 <p>GET Params: startTime, endTime, completed, listIds</p>
-<h2 id="apinamedlistsltbase64-encoded-idgtitem"><code>/api/namedLists/&lt;base64 encoded id&gt;/item</code></h2>
-<p>Methods: POST, add new item</p>
+<h2 id="post-apinamedlistsltbase64-encoded-idgtitem"><code>POST</code> <code>/api/namedLists/&lt;base64 encoded id&gt;/item</code></h2>
+<p>Add new item to a list</p>
 <p>POST Parms: </p>
 <pre><code class="json">{
   &quot;value&quot;: &quot;test&quot;,
@@ -541,9 +659,9 @@
 }
 </code></pre>
 
-<h2 id="apinamedlistsltbase64-encoded-idgtitemltitem-idgt"><code>/api/namedLists/&lt;base64 encoded id&gt;/item/&lt;item id&gt;</code></h2>
-<p>Method: PUT, modify content</p>
-<p>Method: DELETE, delete item</p>
+<h2 id="putdelete-apinamedlistsltbase64-encoded-idgtitemltitem-idgt"><code>PUT|DELETE</code> <code>/api/namedLists/&lt;base64 encoded id&gt;/item/&lt;item id&gt;</code></h2>
+<p>PUT: modify content</p>
+<p>DELETE: delete item</p>
 <h1 id="alexa-preference">Alexa Preference</h1>
 <h2 id="apiallowed-providers"><code>/api/allowed-providers</code></h2>
 <p>Response:</p>
@@ -554,45 +672,45 @@
 
 <h2 id="apiprovider-preferences"><code>/api/provider-preferences</code></h2>
 <p>Response:</p>
-<pre><code>{
-    "preferencesMap": {
-        "MUSIC": [
+<pre><code class="json">{
+    &quot;preferencesMap&quot;: {
+        &quot;MUSIC&quot;: [
             {
-                "associated": true,
-                "preferred": false,
-                "providerId": "AMAZON_MUSIC",
-                "providerName": "Amazon Music",
-                "skillId": null
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: false,
+                &quot;providerId&quot;: &quot;AMAZON_MUSIC&quot;,
+                &quot;providerName&quot;: &quot;Amazon Music&quot;,
+                &quot;skillId&quot;: null
             },
             {
-                "associated": true,
-                "preferred": true,
-                "providerId": "SPOTIFY",
-                "providerName": "Spotify",
-                "skillId": null
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: true,
+                &quot;providerId&quot;: &quot;SPOTIFY&quot;,
+                &quot;providerName&quot;: &quot;Spotify&quot;,
+                &quot;skillId&quot;: null
             }
         ],
-        "STATION": [
+        &quot;STATION&quot;: [
             {
-                "associated": true,
-                "preferred": true,
-                "providerId": "AMAZON_MUSIC",
-                "providerName": "Amazon Music",
-                "skillId": null
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: true,
+                &quot;providerId&quot;: &quot;AMAZON_MUSIC&quot;,
+                &quot;providerName&quot;: &quot;Amazon Music&quot;,
+                &quot;skillId&quot;: null
             },
             {
-                "associated": true,
-                "preferred": false,
-                "providerId": "I_HEART_RADIO",
-                "providerName": "iHeartRadio",
-                "skillId": null
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: false,
+                &quot;providerId&quot;: &quot;I_HEART_RADIO&quot;,
+                &quot;providerName&quot;: &quot;iHeartRadio&quot;,
+                &quot;skillId&quot;: null
             }
         ]
     }
 }
 </code></pre>
-<h1 id="reminders">Reminders</h1>
-<h1 id="alarms">Alarms</h1>
+
+<h1 id="reminders-alarms">Reminders &amp; Alarms</h1>
 <h2 id="apinotifications"><code>/api/notifications</code></h2>
 <p>GET Response:</p>
 <pre><code class="json">{
@@ -637,7 +755,30 @@
 }
 </code></pre>
 
-<h1 id="timers">Timers</h1>
+<h2 id="put-apinotificationscreatereminder"><code>PUT</code> <code>/api/notifications/createReminder</code></h2>
+<p>Create reminder</p>
+<p>Params:</p>
+<pre><code class="json">{
+  &quot;type&quot;: &quot;Reminder&quot;,
+  &quot;status&quot;: &quot;ON&quot;,
+  &quot;alarmTime&quot;: 1545520380000,
+  &quot;originalTime&quot;: &quot;15: 13: 00.000&quot;,
+  &quot;originalDate&quot;: &quot;2018-12-22&quot;,
+  &quot;timeZoneId&quot;: null,
+  &quot;reminderIndex&quot;: null,
+  &quot;skillInfo&quot;: null,
+  &quot;sound&quot;: null,
+  &quot;deviceSerialNumber&quot;: &quot;deviceSerialNumber&quot;,
+  &quot;deviceType&quot;: &quot;deviceType&quot;,
+  &quot;recurringPattern&quot;: null,
+  &quot;reminderLabel&quot;: &quot;test&quot;,
+  &quot;isSaveInFlight&quot;: true,
+  &quot;id&quot;: &quot;createReminder&quot;,
+  &quot;isRecurring&quot;: false,
+  &quot;createdDate&quot;: 1545516813030
+}
+</code></pre>
+
 <h2 id="communications">Communications</h2>
 <h2 id="apicommunicationsproviders"><code>/api/communications/providers</code></h2>
 <p>Response:</p>
@@ -843,69 +984,6 @@
     ]
 }
 </code></pre>
-<h2 id="lists_1">Lists</h2>
-<h2 id="apilistslinkedpartners"><code>/api/lists/linkedPartners</code></h2>
-<p>List linked list partners.</p>
-<h2 id="apilistslistpartners"><code>/api/lists/listPartners</code></h2>
-<p>List TODO list partners. Such as: Any.do, AnyList, Cozi Lists, Picniic, Todoist.</p>
-<p>Response:</p>
-<pre><code>{
-"listPartners": [
-    {
-    "amazonStoreURL": null,
-    "appId": "amzn1.ask.skill.5858c12a-c55c-4a1b-b59c-f7f6bfdf22ed",
-    "appStoreURL": null,
-    "linkingFlowAmazonDeepLinkURL": null,
-    "linkingFlowAndroidDeepLinkURL": null,
-    "linkingFlowIOSDeepLinkURL": null,
-    "linkingFlowWebURL": "skills/dp/B074X3JRHL/?ref=skill_dsk_skb_sr_0",
-    "logoImageURL": "https://images-na.ssl-images-amazon.com/images/I/41y53Nnp+wL.png",
-    "name": "Any.do",
-    "playStoreURL": null,
-    "webURL": null
-    },
-    ...
-]
-}
-</code></pre>
-<h1 id="general">General</h1>
-<h2 id="apifeatureaccess-v3"><code>/api/featureaccess-v3</code></h2>
-<p>Methods: POST</p>
-<p>POST Params:</p>
-<h2 id="voice-responses">Voice Responses</h2>
-<h2 id="apivoice-responses"><code>/api/voice-responses</code></h2>
-<p>Methods: GET, POST</p>
-<p>GET:</p>
-<p>If brief mode is on, <code>TERSE</code> will be listed in <code>promptModes</code></p>
-<p>GET response:</p>
-<pre><code>{
-    "promptModes": []
-}
-</code></pre>
-<p>POST:</p>
-<h2 id="apicustomer-status"><code>/api/customer-status</code></h2>
-<p>Response:</p>
-<pre><code class="json">{
-    &quot;countryOfResidenceSet&quot;:true,
-    &quot;eulaAcceptance&quot;:true,
-    &quot;ftueSkipped&quot;:false,
-    &quot;hasActiveDopplers&quot;:true,
-    &quot;hasPhysical1PDevice&quot;:true,
-    &quot;preferredMarketplaceSet&quot;:true,
-    &quot;tutorialComplete&quot;:false
-}
-</code></pre>
-
-<h2 id="apifeature-alert"><code>/api/feature-alert</code></h2>
-<p>GET Response:</p>
-<pre><code class="json">{&quot;lastDismissed&quot;:null}
-</code></pre>
-
-<h2 id="apifeature-alert-location"><code>/api/feature-alert-location</code></h2>
-<p>GET Response:</p>
-<pre><code class="json">{&quot;url&quot;:&quot;https://pitangui.amazon.com/api/feature-alert-content&quot;}
-</code></pre>
-
 <h1 id="household">Household</h1>
 <h2 id="apihousehold"><code>/api/household</code></h2>
 <p>GET Response:</p>
