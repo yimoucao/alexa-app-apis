@@ -163,9 +163,77 @@ GET Response:
 }
 ```
 
+## `/api/namedLists/<based64 encoded id>`
+
+Method: GET
+
+GET Response:
+
+```json
+{
+    "archived": false,
+    "createdDate": 1545014183847,
+    "customerId": "THECUSTOMERID",
+    "defaultList": true,
+    "itemId": "base64encodedId",
+    "listIds": [
+        "base64encodedId"
+    ],
+    "listReorderVersion": 0,
+    "name": null,
+    "nbestItems": null,
+    "originalAudioId": null,
+    "type": "TO_DO",
+    "updatedDate": 1545014183847,
+    "version": 1
+}
+```
+
+
 ## `/api/namedLists/<base64 encoded id>/items`
 
+Methods: GET
+
+Get items of one list with criteria specified in GET params.
+
 GET Params: startTime, endTime, completed, listIds
+
+## `/api/namedLists/<base64 encoded id>/item`
+
+Methods: POST, add new item
+
+POST Parms: 
+
+```json
+{
+  "value": "test",
+  "listId": "listId",
+  "completed": false,
+  "createdDateTime": 1545348804383
+}
+```
+
+POST Response:
+
+```json
+{
+    "completed": false,
+    "createdDateTime": 1545348805112,
+    "customerId": "A2F1XIMVBAKDT2",
+    "id": "f2461810-8d56-42ae-9f74-b8387c6d7c63",
+    "listId": "listId",
+    "shoppingListItem": false,
+    "updatedDateTime": 1545348805112,
+    "value": "test",
+    "version": 1
+}
+```
+
+## `/api/namedLists/<base64 encoded id>/item/<item id>`
+
+Method: PUT, modify content
+
+Method: DELETE, delete item
 
 # Alexa Preference
 
