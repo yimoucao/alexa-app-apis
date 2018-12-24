@@ -2,7 +2,7 @@
 
 ## `POST` `/api/featureaccess-v3`
 
-Search accessibility to various features(?), results are sorted alphabetically.
+Search accessibility to various features(? validation needed), results are sorted alphabetically.
 
 POST Params:
 
@@ -41,7 +41,7 @@ POST Response:
 }
 ```
 
-## `GET|POST``/api/voice-responses`
+## `GET|POST` `/api/voice-responses`
 
 Methods: GET, POST
 
@@ -91,7 +91,7 @@ GET Response:
 
 ## `/api/devices/`
 
-## `/api/devices-v2/device`
+## `GET` `/api/devices-v2/device`
 
 GET parameters:
 
@@ -214,12 +214,20 @@ Response:
 }
 ```
 
-## `/api/devices/<ALEXA_DEVICE_TYPE_GROUP>/<serial-number>/?deviceType=`
+## `GET` `/api/devices/<ALEXA_DEVICE_TYPE_GROUP>/<serial-number>/?deviceType=`
 
 | param | value/description |
 | --- | --- |
 | ALEXA_DEVICE_TYPE_GROUP | `"app"` |
 | serial-number | device's serial number |
+
+## `GET` `/api/device-preferences`
+
+Response:
+
+```json
+
+```
 
 # Lists
 
@@ -395,63 +403,11 @@ PUT: modify content
 
 DELETE: delete item
 
-# Alexa Preference
-
-## `/api/allowed-providers`
-
-Response:
-
-```json
-{
-    "allowedProviders": ["MUSIC_SKILL","SPOTIFY","AMAZON_MUSIC",...]
-}
-```
-
-## `/api/provider-preferences`
-
-Response:
-```json
-{
-    "preferencesMap": {
-        "MUSIC": [
-            {
-                "associated": true,
-                "preferred": false,
-                "providerId": "AMAZON_MUSIC",
-                "providerName": "Amazon Music",
-                "skillId": null
-            },
-            {
-                "associated": true,
-                "preferred": true,
-                "providerId": "SPOTIFY",
-                "providerName": "Spotify",
-                "skillId": null
-            }
-        ],
-        "STATION": [
-            {
-                "associated": true,
-                "preferred": true,
-                "providerId": "AMAZON_MUSIC",
-                "providerName": "Amazon Music",
-                "skillId": null
-            },
-            {
-                "associated": true,
-                "preferred": false,
-                "providerId": "I_HEART_RADIO",
-                "providerName": "iHeartRadio",
-                "skillId": null
-            }
-        ]
-    }
-}
-```
-
 # Reminders & Alarms
 
-## `/api/notifications`
+While reminders can be set on the Alexa web application, alarms and timers must be set through a device.
+
+## `GET` `/api/notifications`
 
 GET Response:
 
@@ -465,7 +421,7 @@ GET Response:
       "deviceSerialNumber": "DEVICESERIALNUMBER",
       "deviceType": "DEVICETYPE",
       "geoLocationTriggerData": null,
-      "id": "IDididxxx",
+      "id": "IdIdIdId",
       "musicAlarmId": null,
       "musicEntity": null,
       "notificationIndex": "notification-index-here",
@@ -494,6 +450,7 @@ GET Response:
       "type": "Alarm",
       "version": "4"
     }
+    ...
   ]
 }
 ```
@@ -501,6 +458,14 @@ GET Response:
 ## `PUT` `/api/notifications/createReminder`
 
 Create reminder
+
+Recurring Patterns:
+
+"P1D": every day
+"XXXX-WD": weekdays
+"XXXX-WE": weekends
+"XXXX-WXX-1": every Monday
+"XXXX-WXX-3": every Wednesday
 
 Params:
 
@@ -526,6 +491,124 @@ Params:
 }
 ```
 
+Response:
+
+```json
+{
+  "alarmTime": 1545686160000,
+  "createdDate": 0,
+  "deferredAtTime": null,
+  "deviceSerialNumber": "deviceSerialNumber",
+  "deviceType": "deviceType",
+  "geoLocationTriggerData": null,
+  "id": "a-very-long-id",
+  "musicAlarmId": null,
+  "musicEntity": null,
+  "notificationIndex": "notification-index",
+  "originalDate": "2018-12-24",
+  "originalTime": "13:16:00.000",
+  "personProfile": null,
+  "provider": null,
+  "rRuleData": {
+    "byMonthDays": null,
+    "byWeekDays": null,
+    "flexibleRecurringPatternType": null,
+    "frequency": null,
+    "intervals": null,
+    "nextTriggerTimes": null,
+    "notificationTimes": null,
+    "recurEndDate": null,
+    "recurEndTime": null,
+    "recurStartDate": null,
+    "recurStartTime": null,
+    "recurrenceRules": null
+  },
+  "recurringPattern": null,
+  "remainingTime": 0,
+  "reminderLabel": "Test",
+  "skillInfo": null,
+  "snoozedToTime": null,
+  "sound": {
+    "displayName": "Simple Alarm",
+    "folder": null,
+    "id": "system_alerts_melodic_01",
+    "providerId": "ECHO",
+    "sampleUrl": "https://s3.amazonaws.com/deeappservice.prod.notificationtones/system_alerts_melodic_01.mp3"
+  },
+  "status": "ON",
+  "targetPersonProfiles": null,
+  "timeZoneId": null,
+  "timerLabel": null,
+  "triggerTime": 0,
+  "type": "Reminder",
+  "version": "2"
+}
+```
+
+## `PUT|DELETE` `/api/notifications/<id>`
+
+PUT: Modify a reminder
+
+DELETE: Delete a reminder
+
+PUT Params:
+
+```json
+{
+  "id": "a-very-long-id",
+  "alarmTime": 1545692580000,
+  "createdDate": 1545680550605,
+  "deferredAtTime": null,
+  "deviceSerialNumber": "deviceSerialNumber",
+  "deviceType": "deviceType",
+  "geoLocationTriggerData": null,
+  "musicAlarmId": null,
+  "musicEntity": null,
+  "notificationIndex": "notificationIndex",
+  "originalDate": null,
+  "originalTime": "15: 03: 00.000",
+  "personProfile": null,
+  "provider": null,
+  "rRuleData": {
+    "byMonthDays": null,
+    "byWeekDays": null,
+    "flexibleRecurringPatternType": null,
+    "frequency": null,
+    "intervals": null,
+    "nextTriggerTimes": null,
+    "notificationTimes": null,
+    "recurEndDate": null,
+    "recurEndTime": null,
+    "recurStartDate": null,
+    "recurStartTime": null,
+    "recurrenceRules": null
+  },
+  "recurringPattern": "XXXX-WXX-1",
+  "remainingTime": 0,
+  "reminderLabel": "Test3",
+  "skillInfo": null,
+  "snoozedToTime": null,
+  "sound": {
+    "displayName": "Simple Alarm",
+    "folder": null,
+    "id": "system_alerts_melodic_01",
+    "providerId": "ECHO",
+    "sampleUrl": "https: //s3.amazonaws.com/deeappservice.prod.notificationtones/system_alerts_melodic_01.mp3"
+  },
+  "status": "ON",
+  "targetPersonProfiles": null,
+  "timeZoneId": null,
+  "timerLabel": null,
+  "triggerTime": 0,
+  "type": "Reminder",
+  "version": "3",
+  "reminderIndex": null,
+  "isSaveInFlight": true,
+  "isRecurring": true
+}
+```
+
+PUT Response: same as new reminder's response
 
 
 ## Communications
@@ -583,7 +666,7 @@ Response:
     }
     }
 
-## Flash Briefing (content)
+# Flash Briefing (content)
 
 ## `/api/content-skills`
 
@@ -746,6 +829,60 @@ GET response:
         ]
     }
 
+
+# Alexa Preference
+
+## `/api/allowed-providers`
+
+Response:
+
+```json
+{
+    "allowedProviders": ["MUSIC_SKILL","SPOTIFY","AMAZON_MUSIC",...]
+}
+```
+
+## `/api/provider-preferences`
+
+Response:
+```json
+{
+    "preferencesMap": {
+        "MUSIC": [
+            {
+                "associated": true,
+                "preferred": false,
+                "providerId": "AMAZON_MUSIC",
+                "providerName": "Amazon Music",
+                "skillId": null
+            },
+            {
+                "associated": true,
+                "preferred": true,
+                "providerId": "SPOTIFY",
+                "providerName": "Spotify",
+                "skillId": null
+            }
+        ],
+        "STATION": [
+            {
+                "associated": true,
+                "preferred": true,
+                "providerId": "AMAZON_MUSIC",
+                "providerName": "Amazon Music",
+                "skillId": null
+            },
+            {
+                "associated": true,
+                "preferred": false,
+                "providerId": "I_HEART_RADIO",
+                "providerName": "iHeartRadio",
+                "skillId": null
+            }
+        ]
+    }
+}
+```
 
 
 # Household
