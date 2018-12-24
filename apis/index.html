@@ -64,7 +64,7 @@
         
             <li><a class="toctree-l3" href="#post-apifeatureaccess-v3">POST /api/featureaccess-v3</a></li>
         
-            <li><a class="toctree-l3" href="#getpostapivoice-responses">GET|POST``/api/voice-responses</a></li>
+            <li><a class="toctree-l3" href="#getpost-apivoice-responses">GET|POST /api/voice-responses</a></li>
         
             <li><a class="toctree-l3" href="#get-apicustomer-status">GET /api/customer-status</a></li>
         
@@ -81,9 +81,11 @@
         
             <li><a class="toctree-l3" href="#apidevices">/api/devices/</a></li>
         
-            <li><a class="toctree-l3" href="#apidevices-v2device">/api/devices-v2/device</a></li>
+            <li><a class="toctree-l3" href="#get-apidevices-v2device">GET /api/devices-v2/device</a></li>
         
-            <li><a class="toctree-l3" href="#apidevicesltalexa_device_type_groupgtltserial-numbergtdevicetype">/api/devices/&lt;ALEXA_DEVICE_TYPE_GROUP&gt;/&lt;serial-number&gt;/?deviceType=</a></li>
+            <li><a class="toctree-l3" href="#get-apidevicesltalexa_device_type_groupgtltserial-numbergtdevicetype">GET /api/devices/&lt;ALEXA_DEVICE_TYPE_GROUP&gt;/&lt;serial-number&gt;/?deviceType=</a></li>
+        
+            <li><a class="toctree-l3" href="#get-apidevice-preferences">GET /api/device-preferences</a></li>
         
         </ul>
     
@@ -109,24 +111,15 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#alexa-preference">Alexa Preference</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#apiallowed-providers">/api/allowed-providers</a></li>
-        
-            <li><a class="toctree-l3" href="#apiprovider-preferences">/api/provider-preferences</a></li>
-        
-        </ul>
-    
-
     <li class="toctree-l2"><a href="#reminders-alarms">Reminders &amp; Alarms</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#apinotifications">/api/notifications</a></li>
+            <li><a class="toctree-l3" href="#get-apinotifications">GET /api/notifications</a></li>
         
             <li><a class="toctree-l3" href="#put-apinotificationscreatereminder">PUT /api/notifications/createReminder</a></li>
+        
+            <li><a class="toctree-l3" href="#putdelete-apinotificationsltidgt">PUT|DELETE /api/notifications/&lt;id&gt;</a></li>
         
             <li><a class="toctree-l3" href="#communications">Communications</a></li>
         
@@ -134,7 +127,12 @@
         
             <li><a class="toctree-l3" href="#apitvlistingssettings">/api/tvlistings/settings</a></li>
         
-            <li><a class="toctree-l3" href="#flash-briefing-content">Flash Briefing (content)</a></li>
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#flash-briefing-content">Flash Briefing (content)</a></li>
+    
+        <ul>
         
             <li><a class="toctree-l3" href="#apicontent-skills">/api/content-skills</a></li>
         
@@ -149,6 +147,17 @@
             <li><a class="toctree-l3" href="#apitrafficsettings">/api/traffic/settings</a></li>
         
             <li><a class="toctree-l3" href="#apitrafficsuggest">/api/traffic/suggest</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#alexa-preference">Alexa Preference</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#apiallowed-providers">/api/allowed-providers</a></li>
+        
+            <li><a class="toctree-l3" href="#apiprovider-preferences">/api/provider-preferences</a></li>
         
         </ul>
     
@@ -301,7 +310,7 @@
               
                 <h1 id="general">General</h1>
 <h2 id="post-apifeatureaccess-v3"><code>POST</code> <code>/api/featureaccess-v3</code></h2>
-<p>Search accessibility to various features(?), results are sorted alphabetically.</p>
+<p>Search accessibility to various features(? validation needed), results are sorted alphabetically.</p>
 <p>POST Params:</p>
 <pre><code class="json">{
   &quot;features&quot;: [
@@ -335,7 +344,7 @@
 }
 </code></pre>
 
-<h2 id="getpostapivoice-responses"><code>GET|POST``/api/voice-responses</code></h2>
+<h2 id="getpost-apivoice-responses"><code>GET|POST</code> <code>/api/voice-responses</code></h2>
 <p>Methods: GET, POST</p>
 <p>GET:</p>
 <p>If brief mode is on, <code>TERSE</code> will be listed in <code>promptModes</code></p>
@@ -370,7 +379,7 @@
 
 <h1 id="devices">Devices</h1>
 <h2 id="apidevices"><code>/api/devices/</code></h2>
-<h2 id="apidevices-v2device"><code>/api/devices-v2/device</code></h2>
+<h2 id="get-apidevices-v2device"><code>GET</code> <code>/api/devices-v2/device</code></h2>
 <p>GET parameters:</p>
 <table>
 <thead>
@@ -501,7 +510,7 @@
 }
 </code></pre>
 
-<h2 id="apidevicesltalexa_device_type_groupgtltserial-numbergtdevicetype"><code>/api/devices/&lt;ALEXA_DEVICE_TYPE_GROUP&gt;/&lt;serial-number&gt;/?deviceType=</code></h2>
+<h2 id="get-apidevicesltalexa_device_type_groupgtltserial-numbergtdevicetype"><code>GET</code> <code>/api/devices/&lt;ALEXA_DEVICE_TYPE_GROUP&gt;/&lt;serial-number&gt;/?deviceType=</code></h2>
 <table>
 <thead>
 <tr>
@@ -520,6 +529,11 @@
 </tr>
 </tbody>
 </table>
+<h2 id="get-apidevice-preferences"><code>GET</code> <code>/api/device-preferences</code></h2>
+<p>Response:</p>
+<pre><code class="json">
+</code></pre>
+
 <h1 id="lists">Lists</h1>
 <h2 id="get-apilistslinkedpartners"><code>GET</code> <code>/api/lists/linkedPartners</code></h2>
 <p>List linked list partners.</p>
@@ -662,56 +676,9 @@
 <h2 id="putdelete-apinamedlistsltbase64-encoded-idgtitemltitem-idgt"><code>PUT|DELETE</code> <code>/api/namedLists/&lt;base64 encoded id&gt;/item/&lt;item id&gt;</code></h2>
 <p>PUT: modify content</p>
 <p>DELETE: delete item</p>
-<h1 id="alexa-preference">Alexa Preference</h1>
-<h2 id="apiallowed-providers"><code>/api/allowed-providers</code></h2>
-<p>Response:</p>
-<pre><code class="json">{
-    &quot;allowedProviders&quot;: [&quot;MUSIC_SKILL&quot;,&quot;SPOTIFY&quot;,&quot;AMAZON_MUSIC&quot;,...]
-}
-</code></pre>
-
-<h2 id="apiprovider-preferences"><code>/api/provider-preferences</code></h2>
-<p>Response:</p>
-<pre><code class="json">{
-    &quot;preferencesMap&quot;: {
-        &quot;MUSIC&quot;: [
-            {
-                &quot;associated&quot;: true,
-                &quot;preferred&quot;: false,
-                &quot;providerId&quot;: &quot;AMAZON_MUSIC&quot;,
-                &quot;providerName&quot;: &quot;Amazon Music&quot;,
-                &quot;skillId&quot;: null
-            },
-            {
-                &quot;associated&quot;: true,
-                &quot;preferred&quot;: true,
-                &quot;providerId&quot;: &quot;SPOTIFY&quot;,
-                &quot;providerName&quot;: &quot;Spotify&quot;,
-                &quot;skillId&quot;: null
-            }
-        ],
-        &quot;STATION&quot;: [
-            {
-                &quot;associated&quot;: true,
-                &quot;preferred&quot;: true,
-                &quot;providerId&quot;: &quot;AMAZON_MUSIC&quot;,
-                &quot;providerName&quot;: &quot;Amazon Music&quot;,
-                &quot;skillId&quot;: null
-            },
-            {
-                &quot;associated&quot;: true,
-                &quot;preferred&quot;: false,
-                &quot;providerId&quot;: &quot;I_HEART_RADIO&quot;,
-                &quot;providerName&quot;: &quot;iHeartRadio&quot;,
-                &quot;skillId&quot;: null
-            }
-        ]
-    }
-}
-</code></pre>
-
 <h1 id="reminders-alarms">Reminders &amp; Alarms</h1>
-<h2 id="apinotifications"><code>/api/notifications</code></h2>
+<p>While reminders can be set on the Alexa web application, alarms and timers must be set through a device.</p>
+<h2 id="get-apinotifications"><code>GET</code> <code>/api/notifications</code></h2>
 <p>GET Response:</p>
 <pre><code class="json">{
   &quot;notifications&quot;: [
@@ -722,7 +689,7 @@
       &quot;deviceSerialNumber&quot;: &quot;DEVICESERIALNUMBER&quot;,
       &quot;deviceType&quot;: &quot;DEVICETYPE&quot;,
       &quot;geoLocationTriggerData&quot;: null,
-      &quot;id&quot;: &quot;IDididxxx&quot;,
+      &quot;id&quot;: &quot;IdIdIdId&quot;,
       &quot;musicAlarmId&quot;: null,
       &quot;musicEntity&quot;: null,
       &quot;notificationIndex&quot;: &quot;notification-index-here&quot;,
@@ -751,12 +718,19 @@
       &quot;type&quot;: &quot;Alarm&quot;,
       &quot;version&quot;: &quot;4&quot;
     }
+    ...
   ]
 }
 </code></pre>
 
 <h2 id="put-apinotificationscreatereminder"><code>PUT</code> <code>/api/notifications/createReminder</code></h2>
 <p>Create reminder</p>
+<p>Recurring Patterns:</p>
+<p>"P1D": every day
+"XXXX-WD": weekdays
+"XXXX-WE": weekends
+"XXXX-WXX-1": every Monday
+"XXXX-WXX-3": every Wednesday</p>
 <p>Params:</p>
 <pre><code class="json">{
   &quot;type&quot;: &quot;Reminder&quot;,
@@ -779,6 +753,117 @@
 }
 </code></pre>
 
+<p>Response:</p>
+<pre><code class="json">{
+  &quot;alarmTime&quot;: 1545686160000,
+  &quot;createdDate&quot;: 0,
+  &quot;deferredAtTime&quot;: null,
+  &quot;deviceSerialNumber&quot;: &quot;deviceSerialNumber&quot;,
+  &quot;deviceType&quot;: &quot;deviceType&quot;,
+  &quot;geoLocationTriggerData&quot;: null,
+  &quot;id&quot;: &quot;a-very-long-id&quot;,
+  &quot;musicAlarmId&quot;: null,
+  &quot;musicEntity&quot;: null,
+  &quot;notificationIndex&quot;: &quot;notification-index&quot;,
+  &quot;originalDate&quot;: &quot;2018-12-24&quot;,
+  &quot;originalTime&quot;: &quot;13:16:00.000&quot;,
+  &quot;personProfile&quot;: null,
+  &quot;provider&quot;: null,
+  &quot;rRuleData&quot;: {
+    &quot;byMonthDays&quot;: null,
+    &quot;byWeekDays&quot;: null,
+    &quot;flexibleRecurringPatternType&quot;: null,
+    &quot;frequency&quot;: null,
+    &quot;intervals&quot;: null,
+    &quot;nextTriggerTimes&quot;: null,
+    &quot;notificationTimes&quot;: null,
+    &quot;recurEndDate&quot;: null,
+    &quot;recurEndTime&quot;: null,
+    &quot;recurStartDate&quot;: null,
+    &quot;recurStartTime&quot;: null,
+    &quot;recurrenceRules&quot;: null
+  },
+  &quot;recurringPattern&quot;: null,
+  &quot;remainingTime&quot;: 0,
+  &quot;reminderLabel&quot;: &quot;Test&quot;,
+  &quot;skillInfo&quot;: null,
+  &quot;snoozedToTime&quot;: null,
+  &quot;sound&quot;: {
+    &quot;displayName&quot;: &quot;Simple Alarm&quot;,
+    &quot;folder&quot;: null,
+    &quot;id&quot;: &quot;system_alerts_melodic_01&quot;,
+    &quot;providerId&quot;: &quot;ECHO&quot;,
+    &quot;sampleUrl&quot;: &quot;https://s3.amazonaws.com/deeappservice.prod.notificationtones/system_alerts_melodic_01.mp3&quot;
+  },
+  &quot;status&quot;: &quot;ON&quot;,
+  &quot;targetPersonProfiles&quot;: null,
+  &quot;timeZoneId&quot;: null,
+  &quot;timerLabel&quot;: null,
+  &quot;triggerTime&quot;: 0,
+  &quot;type&quot;: &quot;Reminder&quot;,
+  &quot;version&quot;: &quot;2&quot;
+}
+</code></pre>
+
+<h2 id="putdelete-apinotificationsltidgt"><code>PUT|DELETE</code> <code>/api/notifications/&lt;id&gt;</code></h2>
+<p>PUT: Modify a reminder</p>
+<p>DELETE: Delete a reminder</p>
+<p>PUT Params:</p>
+<pre><code class="json">{
+  &quot;id&quot;: &quot;a-very-long-id&quot;,
+  &quot;alarmTime&quot;: 1545692580000,
+  &quot;createdDate&quot;: 1545680550605,
+  &quot;deferredAtTime&quot;: null,
+  &quot;deviceSerialNumber&quot;: &quot;deviceSerialNumber&quot;,
+  &quot;deviceType&quot;: &quot;deviceType&quot;,
+  &quot;geoLocationTriggerData&quot;: null,
+  &quot;musicAlarmId&quot;: null,
+  &quot;musicEntity&quot;: null,
+  &quot;notificationIndex&quot;: &quot;notificationIndex&quot;,
+  &quot;originalDate&quot;: null,
+  &quot;originalTime&quot;: &quot;15: 03: 00.000&quot;,
+  &quot;personProfile&quot;: null,
+  &quot;provider&quot;: null,
+  &quot;rRuleData&quot;: {
+    &quot;byMonthDays&quot;: null,
+    &quot;byWeekDays&quot;: null,
+    &quot;flexibleRecurringPatternType&quot;: null,
+    &quot;frequency&quot;: null,
+    &quot;intervals&quot;: null,
+    &quot;nextTriggerTimes&quot;: null,
+    &quot;notificationTimes&quot;: null,
+    &quot;recurEndDate&quot;: null,
+    &quot;recurEndTime&quot;: null,
+    &quot;recurStartDate&quot;: null,
+    &quot;recurStartTime&quot;: null,
+    &quot;recurrenceRules&quot;: null
+  },
+  &quot;recurringPattern&quot;: &quot;XXXX-WXX-1&quot;,
+  &quot;remainingTime&quot;: 0,
+  &quot;reminderLabel&quot;: &quot;Test3&quot;,
+  &quot;skillInfo&quot;: null,
+  &quot;snoozedToTime&quot;: null,
+  &quot;sound&quot;: {
+    &quot;displayName&quot;: &quot;Simple Alarm&quot;,
+    &quot;folder&quot;: null,
+    &quot;id&quot;: &quot;system_alerts_melodic_01&quot;,
+    &quot;providerId&quot;: &quot;ECHO&quot;,
+    &quot;sampleUrl&quot;: &quot;https: //s3.amazonaws.com/deeappservice.prod.notificationtones/system_alerts_melodic_01.mp3&quot;
+  },
+  &quot;status&quot;: &quot;ON&quot;,
+  &quot;targetPersonProfiles&quot;: null,
+  &quot;timeZoneId&quot;: null,
+  &quot;timerLabel&quot;: null,
+  &quot;triggerTime&quot;: 0,
+  &quot;type&quot;: &quot;Reminder&quot;,
+  &quot;version&quot;: &quot;3&quot;,
+  &quot;reminderIndex&quot;: null,
+  &quot;isSaveInFlight&quot;: true,
+  &quot;isRecurring&quot;: true
+}
+</code></pre>
+
+<p>PUT Response: same as new reminder's response</p>
 <h2 id="communications">Communications</h2>
 <h2 id="apicommunicationsproviders"><code>/api/communications/providers</code></h2>
 <p>Response:</p>
@@ -829,7 +914,7 @@
 }
 }
 </code></pre>
-<h2 id="flash-briefing-content">Flash Briefing (content)</h2>
+<h1 id="flash-briefing-content">Flash Briefing (content)</h1>
 <h2 id="apicontent-skills"><code>/api/content-skills</code></h2>
 <p>Return content skills the user has.</p>
 <p>Response:</p>
@@ -984,6 +1069,54 @@
     ]
 }
 </code></pre>
+<h1 id="alexa-preference">Alexa Preference</h1>
+<h2 id="apiallowed-providers"><code>/api/allowed-providers</code></h2>
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;allowedProviders&quot;: [&quot;MUSIC_SKILL&quot;,&quot;SPOTIFY&quot;,&quot;AMAZON_MUSIC&quot;,...]
+}
+</code></pre>
+
+<h2 id="apiprovider-preferences"><code>/api/provider-preferences</code></h2>
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;preferencesMap&quot;: {
+        &quot;MUSIC&quot;: [
+            {
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: false,
+                &quot;providerId&quot;: &quot;AMAZON_MUSIC&quot;,
+                &quot;providerName&quot;: &quot;Amazon Music&quot;,
+                &quot;skillId&quot;: null
+            },
+            {
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: true,
+                &quot;providerId&quot;: &quot;SPOTIFY&quot;,
+                &quot;providerName&quot;: &quot;Spotify&quot;,
+                &quot;skillId&quot;: null
+            }
+        ],
+        &quot;STATION&quot;: [
+            {
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: true,
+                &quot;providerId&quot;: &quot;AMAZON_MUSIC&quot;,
+                &quot;providerName&quot;: &quot;Amazon Music&quot;,
+                &quot;skillId&quot;: null
+            },
+            {
+                &quot;associated&quot;: true,
+                &quot;preferred&quot;: false,
+                &quot;providerId&quot;: &quot;I_HEART_RADIO&quot;,
+                &quot;providerName&quot;: &quot;iHeartRadio&quot;,
+                &quot;skillId&quot;: null
+            }
+        ]
+    }
+}
+</code></pre>
+
 <h1 id="household">Household</h1>
 <h2 id="apihousehold"><code>/api/household</code></h2>
 <p>GET Response:</p>
