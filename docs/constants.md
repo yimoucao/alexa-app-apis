@@ -42,7 +42,7 @@
 
 ## DEVICE_TYPEs
 
-| device brand | DEVICE_TYPE | found in constant name |
+| device series | DEVICE_TYPE | found in constant name |
 | --- | --- | --- |
 | DOPPLER | AB72C64C86AW2 | `TXT_DOPPLER_DEVICE_TYPE` |
 | DOT | AKNO1N0KSFN8L | `TXT_DOT_DEVICE_TYPE` |

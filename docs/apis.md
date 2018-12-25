@@ -610,8 +610,35 @@ PUT Params:
 
 PUT Response: same as new reminder's response
 
+# Contacts
 
-## Communications
+## `GET` `/api/get-available-countries-for-connect`
+
+Response:
+
+| countryCode | dialingCode |
+| ----------- | ----------- |
+| DE          | +49         |
+| GI          | +350        |
+| AT          | +43         |
+| GB          | +44         |
+| IE          | +353        |
+| US          | +1          |
+
+    {
+    "availableCountries": [
+        {
+        "countryCode": "DE",
+        "dialingCode": "+49"
+        },
+        ...
+    ]
+    }
+
+
+
+
+# Communications
 
 ## `/api/communications/providers`
 
@@ -935,6 +962,10 @@ GET Response:
 }
 ```
 
+# CMD ?
+
+/api/np/command?deviceSerialNumber=XXXXXXXXXXXXXXXX&deviceType=XXXXXXXXXXXXXX&{"type":"PlayCommand","contentFocusClientId":null}=
+
 # TODO
 
 ## `/api/authentication`
@@ -992,29 +1023,6 @@ Response:
 
 ## `/api/external-auth/link-url`
 
-## `/api/get-available-countries-for-connect`
-
-Response:
-
-| countryCode | dialingCode |
-| ----------- | ----------- |
-| DE          | +49         |
-| GI          | +350        |
-| AT          | +43         |
-| GB          | +44         |
-| IE          | +353        |
-| US          | +1          |
-
-    {
-    "availableCountries": [
-        {
-        "countryCode": "DE",
-        "dialingCode": "+49"
-        },
-        ...
-    ]
-    }
-
 ## `/api/get-customer-pfm`
 
 Get customer's **p**ersonal **f**inantial **m**arket (?)
@@ -1043,10 +1051,16 @@ Response:
 | ------------------- | ----------------------- | ------ |
 | DE                  | Deutsch                 | de-DE  |
 | US                  | English (United States) | en-US  |
-| CA                  | English (Canada)        | de-CA  |
-| CA                  | English (Canada)        | de-CA  |
-| CA                  | English (Canada)        | de-CA  |
-| CA                  | English (Canada)        | de-CA  |
+| CA                  | English (Canada)        | en-CA  |
+| CA                  | Français (Canada) Version préliminaire | fr-CA |
+| IN                  | English (India)         | en-IN  |
+| ES                  | Español (España)        | es-ES  |
+| MX                  | Español (México)        | es-MX  |
+| IT                  | Italiano (Italia) | it-IT |
+| AU                  | English (Australia/New Zealand) | en-AU |
+| FR                  | Français (France) | fr-FR |
+| GB                  | English (United Kingdom) | en-GB |
+| JP                  | 日本語 | ja-JP |
 
     {
     "availableLanguages": [
