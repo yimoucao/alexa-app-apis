@@ -121,7 +121,21 @@
         
             <li><a class="toctree-l3" href="#putdelete-apinotificationsltidgt">PUT|DELETE /api/notifications/&lt;id&gt;</a></li>
         
-            <li><a class="toctree-l3" href="#communications">Communications</a></li>
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#contacts">Contacts</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#get-apiget-available-countries-for-connect">GET /api/get-available-countries-for-connect</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#communications">Communications</a></li>
+    
+        <ul>
         
             <li><a class="toctree-l3" href="#apicommunicationsproviders">/api/communications/providers</a></li>
         
@@ -177,6 +191,9 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#cmd">CMD ?</a></li>
+    
+
     <li class="toctree-l2"><a href="#todo">TODO</a></li>
     
         <ul>
@@ -208,8 +225,6 @@
             <li><a class="toctree-l3" href="#apiexternal-auth">/api/external-auth</a></li>
         
             <li><a class="toctree-l3" href="#apiexternal-authlink-url">/api/external-auth/link-url</a></li>
-        
-            <li><a class="toctree-l3" href="#apiget-available-countries-for-connect">/api/get-available-countries-for-connect</a></li>
         
             <li><a class="toctree-l3" href="#apiget-customer-pfm">/api/get-customer-pfm</a></li>
         
@@ -864,7 +879,54 @@
 </code></pre>
 
 <p>PUT Response: same as new reminder's response</p>
-<h2 id="communications">Communications</h2>
+<h1 id="contacts">Contacts</h1>
+<h2 id="get-apiget-available-countries-for-connect"><code>GET</code> <code>/api/get-available-countries-for-connect</code></h2>
+<p>Response:</p>
+<table>
+<thead>
+<tr>
+<th>countryCode</th>
+<th>dialingCode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DE</td>
+<td>+49</td>
+</tr>
+<tr>
+<td>GI</td>
+<td>+350</td>
+</tr>
+<tr>
+<td>AT</td>
+<td>+43</td>
+</tr>
+<tr>
+<td>GB</td>
+<td>+44</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>+353</td>
+</tr>
+<tr>
+<td>US</td>
+<td>+1</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+"availableCountries": [
+    {
+    "countryCode": "DE",
+    "dialingCode": "+49"
+    },
+    ...
+]
+}
+</code></pre>
+<h1 id="communications">Communications</h1>
 <h2 id="apicommunicationsproviders"><code>/api/communications/providers</code></h2>
 <p>Response:</p>
 <pre><code>{
@@ -1155,6 +1217,8 @@
 }
 </code></pre>
 
+<h1 id="cmd">CMD ?</h1>
+<p>/api/np/command?deviceSerialNumber=XXXXXXXXXXXXXXXX&amp;deviceType=XXXXXXXXXXXXXX&amp;{"type":"PlayCommand","contentFocusClientId":null}=</p>
 <h1 id="todo">TODO</h1>
 <h2 id="apiauthentication"><code>/api/authentication</code></h2>
 <h2 id="apiavailable-mid-field"><code>/api/available-mid-field</code></h2>
@@ -1194,52 +1258,6 @@
 <h2 id="apieonhouseholdaccounts"><code>/api/eon/householdaccounts</code></h2>
 <h2 id="apiexternal-auth"><code>/api/external-auth</code></h2>
 <h2 id="apiexternal-authlink-url"><code>/api/external-auth/link-url</code></h2>
-<h2 id="apiget-available-countries-for-connect"><code>/api/get-available-countries-for-connect</code></h2>
-<p>Response:</p>
-<table>
-<thead>
-<tr>
-<th>countryCode</th>
-<th>dialingCode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DE</td>
-<td>+49</td>
-</tr>
-<tr>
-<td>GI</td>
-<td>+350</td>
-</tr>
-<tr>
-<td>AT</td>
-<td>+43</td>
-</tr>
-<tr>
-<td>GB</td>
-<td>+44</td>
-</tr>
-<tr>
-<td>IE</td>
-<td>+353</td>
-</tr>
-<tr>
-<td>US</td>
-<td>+1</td>
-</tr>
-</tbody>
-</table>
-<pre><code>{
-"availableCountries": [
-    {
-    "countryCode": "DE",
-    "dialingCode": "+49"
-    },
-    ...
-]
-}
-</code></pre>
 <h2 id="apiget-customer-pfm"><code>/api/get-customer-pfm</code></h2>
 <p>Get customer's <strong>p</strong>ersonal <strong>f</strong>inantial <strong>m</strong>arket (?)</p>
 <p>TODO: all market place ids</p>
@@ -1278,22 +1296,52 @@
 <tr>
 <td>CA</td>
 <td>English (Canada)</td>
-<td>de-CA</td>
+<td>en-CA</td>
 </tr>
 <tr>
 <td>CA</td>
-<td>English (Canada)</td>
-<td>de-CA</td>
+<td>Français (Canada) Version préliminaire</td>
+<td>fr-CA</td>
 </tr>
 <tr>
-<td>CA</td>
-<td>English (Canada)</td>
-<td>de-CA</td>
+<td>IN</td>
+<td>English (India)</td>
+<td>en-IN</td>
 </tr>
 <tr>
-<td>CA</td>
-<td>English (Canada)</td>
-<td>de-CA</td>
+<td>ES</td>
+<td>Español (España)</td>
+<td>es-ES</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>Español (México)</td>
+<td>es-MX</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>Italiano (Italia)</td>
+<td>it-IT</td>
+</tr>
+<tr>
+<td>AU</td>
+<td>English (Australia/New Zealand)</td>
+<td>en-AU</td>
+</tr>
+<tr>
+<td>FR</td>
+<td>Français (France)</td>
+<td>fr-FR</td>
+</tr>
+<tr>
+<td>GB</td>
+<td>English (United Kingdom)</td>
+<td>en-GB</td>
+</tr>
+<tr>
+<td>JP</td>
+<td>日本語</td>
+<td>ja-JP</td>
 </tr>
 </tbody>
 </table>
